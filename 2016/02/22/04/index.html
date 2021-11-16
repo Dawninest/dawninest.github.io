@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dark Force">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Dawninest</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+        GitHub</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2016/02/22/04/">
+        Objective-C | 继承，方法，多态
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2016-02-22 00:00:00" datetime="2016-02-21T16:00:00.000Z" itemprop="datePublished">
+  2016-02-22
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>面对对象的重要语法，OC只支持单继承 </p>
+<p>特点：</p>
+<ul>
+<li><p>使用继承可以实现代码的复用，减少代码亢余，      </p>
+</li>
+<li><p>子类可以同时拥有父类中所有哦允许子类继承的成员和方法       </p>
+</li>
+<li><p>子类可以改变父类中已有的方法 </p>
+</li>
+</ul>
+<h3 id="self"><a href="#self" class="headerlink" title="self"></a><strong>self</strong></h3><p>在类的方法中替代自身，替代调方法的角色，可以直接调用本类或父类的方法</p>
+<h3 id="super"><a href="#super" class="headerlink" title="super"></a><strong>super</strong></h3><p>在类的方法中替代父类，只能用来调用父类的方法，类中方法名与父类相同时，若想调用父类的方法时，只能使用super </p>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p>多态即为 接口的多种不同的实现方式，不同对象对同一消息的不同响应子类可以重写父类的方法，</p>
+<p>多态允许方法重名，参数或返回值可以是父类型传入或返回 </p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>－方法   调用   [对象  方法名]</p>
+<p>＋方法   调用   [类名  方法名]</p>
+<h3 id="setter-gettter-方法"><a href="#setter-gettter-方法" class="headerlink" title="setter,gettter 方法"></a><strong>setter</strong>,<strong>gettter</strong> 方法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- (void)setName:(NSString *)name</span><br><span class="line">&#123;</span><br><span class="line">	_name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (NSString *)name</span><br><span class="line">&#123;</span><br><span class="line">	retrun _name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>重写<strong>description</strong>修改 %@ 的输出格式</p>
+
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="post-toc-number">1.</span> <span class="post-toc-text">继承</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#self"><span class="post-toc-number">2.</span> <span class="post-toc-text">self</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#super"><span class="post-toc-number">3.</span> <span class="post-toc-text">super</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%A4%9A%E6%80%81"><span class="post-toc-number">4.</span> <span class="post-toc-text">多态</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%96%B9%E6%B3%95"><span class="post-toc-number">5.</span> <span class="post-toc-text">方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#setter-gettter-%E6%96%B9%E6%B3%95"><span class="post-toc-number">6.</span> <span class="post-toc-text">setter,gettter 方法</span></a></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Dawninest's Blob website.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  </span>
+
+    </footer>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/index.js"></script>
+
+  
+  </div>
+</body>

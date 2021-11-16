@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dark Force">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Dawninest</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+        GitHub</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2016/03/18/08/">
+        Objective-C | 手势触摸
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2016-03-18 00:00:00" datetime="2016-03-17T16:00:00.000Z" itemprop="datePublished">
+  2016-03-18
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="手势"><a href="#手势" class="headerlink" title="手势"></a>手势</h3><h4 id="建立手势对象"><a href="#建立手势对象" class="headerlink" title="建立手势对象"></a>建立手势对象</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">_animationView = [[UIView alloc]init];</span><br><span class="line">_animationView.bounds = CGRectMake(0, 0, 200, 200);</span><br><span class="line">_animationView.center = self.view.center;</span><br><span class="line">_animationView.backgroundColor = [UIColor colorWithRed:0.21 green:0.6 blue:0.93 alpha:1];</span><br><span class="line">[self.view addSubview:_animationView];</span><br><span class="line">//打开用户交互 如果是imageView，则需要打开交互</span><br><span class="line">_animationView.userInteractionEnabled = YES;</span><br></pre></td></tr></table></figure>
+
+<h4 id="单击手势"><a href="#单击手势" class="headerlink" title="单击手势"></a>单击手势</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.初始化手势控制器-单击手势控制器</span><br><span class="line">UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAnimationView:)];</span><br><span class="line">2.为视图添加手势</span><br><span class="line">[_animationView addGestureRecognizer:tapGes];</span><br></pre></td></tr></table></figure>
+
+<h4 id="缩放手势"><a href="#缩放手势" class="headerlink" title="缩放手势"></a>缩放手势</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">UIPinchGestureRecognizer *pinchGes = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(pinchAnimationView:)];</span><br><span class="line">[_animationView addGestureRecognizer:pinchGes];</span><br><span class="line">缩放事件</span><br><span class="line">- (void)pinchAnimationView:(UIPinchGestureRecognizer *)gesture</span><br><span class="line">&#123;</span><br><span class="line">	if (gesture.state ==  UIGestureRecognizerStateChanged) &#123;</span><br><span class="line">      /*</span><br><span class="line">       UIGestureRecognizerStateBegan     开始－开始点击</span><br><span class="line">       UIGestureRecognizerStateChanged   改变－每一次移动手指</span><br><span class="line">       UIGestureRecognizerStateEnded     结束－手指挪开</span><br><span class="line">       */</span><br><span class="line">      CGAffineTransformScale变幻效果的叠加的</span><br><span class="line">      当手势改变时执行缩放操作</span><br><span class="line">      gesture.view.transform = CGAffineTransformScale(gesture.view.transform, gesture.scale, gesture.scale);</span><br><span class="line">      保存缩放系数为1</span><br><span class="line">      gesture.scale = 1;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="拖动手势"><a href="#拖动手势" class="headerlink" title="拖动手势"></a>拖动手势</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">UIPanGestureRecognizer *panGes = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panAnimationView:)];</span><br><span class="line">[_animationView addGestureRecognizer:panGes];</span><br><span class="line">拖动事件</span><br><span class="line">- (void)panAnimationView:(UIPanGestureRecognizer *)gesture</span><br><span class="line">&#123;</span><br><span class="line">    if (gesture.state == UIGestureRecognizerStateChanged) &#123;</span><br><span class="line">        获取手指在指定视图(self.view)的移动坐标</span><br><span class="line">        CGPoint transition = [gesture translationInView:self.view];</span><br><span class="line">       更新 _animationView 的center</span><br><span class="line">        gesture.view.center = CGPointMake(gesture.view.center.x + transition.x, gesture.view.center.y + transition.y);</span><br><span class="line">        把增量设置为0</span><br><span class="line">        [gesture setTranslation:CGPointZero inView:self.view];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="触摸"><a href="#触摸" class="headerlink" title="触摸"></a>触摸</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">触摸针对的是整个View，是视图控制器自带方法，用的时候直接重写</span><br><span class="line">- (void)touchesBegan:(NSSet&lt;UITouch *&gt; *)touches withEvent:(UIEvent *)event</span><br><span class="line">&#123;</span><br><span class="line">    [super touchesBegan:touches withEvent:event];</span><br><span class="line">    //拿到当前点击位置 通过UITouch</span><br><span class="line">    UITouch *nowTouch = touches.anyObject;</span><br><span class="line">    CGPoint location = [nowTouch locationInView:self.view];</span><br><span class="line">    //弹性动画</span><br><span class="line">    //usingSpringWithDamping 阻尼系数 0-1 越小越明显</span><br><span class="line">    //initialSpringVelocity 初始速度</span><br><span class="line">    [UIView animateWithDuration:0.2 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0 options:0 animations:^&#123;</span><br><span class="line">        //更新图片坐标-加动画</span><br><span class="line">        _imageView.bounds = CGRectMake(0, 0, 120, 120);</span><br><span class="line">        _imageView.center = location;</span><br><span class="line">    &#125; completion:^(BOOL finished)&#123;</span><br><span class="line">        [UIView animateWithDuration:0.2 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0 options:0 animations:^&#123;</span><br><span class="line">            _imageView.bounds = CGRectMake(0, 0, 80, 80);</span><br><span class="line">        &#125; completion:nil];</span><br><span class="line">    &#125;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%89%8B%E5%8A%BF"><span class="post-toc-number">1.</span> <span class="post-toc-text">手势</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%BB%BA%E7%AB%8B%E6%89%8B%E5%8A%BF%E5%AF%B9%E8%B1%A1"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">建立手势对象</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%8D%95%E5%87%BB%E6%89%8B%E5%8A%BF"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">单击手势</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%BC%A9%E6%94%BE%E6%89%8B%E5%8A%BF"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">缩放手势</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%8B%96%E5%8A%A8%E6%89%8B%E5%8A%BF"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">拖动手势</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%A7%A6%E6%91%B8"><span class="post-toc-number">2.</span> <span class="post-toc-text">触摸</span></a></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Dawninest's Blob website.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  </span>
+
+    </footer>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/index.js"></script>
+
+  
+  </div>
+</body>

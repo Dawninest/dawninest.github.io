@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dark Force">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Dawninest</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+        GitHub</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <div class="menu-nav">
+  
+  <div class="menu-navItem">
+    <div class="menu-navItem-tit">
+      <a href="/archives">
+        <span>
+          时间点</span>
+      </a>
+    </div>
+    <div class="menu-navItem-cont">
+        <div class="menu-navArchive-cont">
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a></li></ul>
+</div>
+    </div>
+  </div>
+  
+  <div class="menu-navItem">
+    <div class="menu-navItem-tit">
+      <a href="/">
+        <span>
+          关键字</span>
+      </a>
+    </div>
+    <div class="menu-navItem-cont">
+        <div class="menu-navTag-cont">
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReactNative/" rel="tag">ReactNative</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/" rel="tag">macOS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">微信小程序</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E8%AF%AD/" rel="tag">日语</a><span class="tag-list-count">1</span></li></ul>
+</div>
+    </div>
+  </div>
+  
+</div>
+
+<div id="index-content" class="content">
+
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/09/30/29/">
+        React Native | 整理的一些面试题
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-09-30 00:00:00" datetime="2021-09-29T16:00:00.000Z" itemprop="datePublished">
+  2021-09-30
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactNative/" rel="tag">ReactNative</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="ReactNative-面试知识点"><a href="#ReactNative-面试知识点" class="headerlink" title="ReactNative 面试知识点"></a>ReactNative 面试知识点</h2><p>1.从输入url到页面显示发生了什么</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. DNS解析, 通过域名去找到IP</span><br><span class="line">2. TCP连接</span><br><span class="line">3. 发送http请求(8种https的请求方式: GET,HEAD,POST,PUT,DELETE,CONNECT,OPTIONS,TRACE)</span><br><span class="line">4. 服务器处理请求并返回HTTP报文</span><br><span class="line">5. 浏览器解析渲染页面(边解析边渲染,解析HTML文件构建DOM树,然后解析CSS文件渲染树)</span><br><span class="line">6. 连接结束</span><br></pre></td></tr></table></figure>
+
+<p>2.react单向数据流</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">核心思想是组件不回改变接收的数据,只监听数据的变化,当数据发生变化时,它们会使用接收到的新值,而不是去修改已有的值,当组件的更新机制触发后,他们知识使用新值进行重新渲染</span><br></pre></td></tr></table></figure>
+
+<p>3.react的生命周期</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">当组件实例被创建并插入 DOM 中时，其生命周期调用顺序如下</span><br><span class="line">constructor()</span><br><span class="line">static getDerivedStateFromProps()</span><br><span class="line">会在调用 render 方法之前调用，并且在初始挂载及后续更新时都会被调用。它应返回一个对象来更新 state，如果返回 null 则不更新任何内容。</span><br><span class="line">render()</span><br><span class="line">componentDidMount()</span><br><span class="line"></span><br><span class="line">componentWillMount() // 该方法即将过期，避免使用</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">当组件的 props 或 state 发生变化时会触发更新。组件更新的生命周期调用顺序如下</span><br><span class="line">static getDerivedStateFromProps()</span><br><span class="line">shouldComponentUpdate()</span><br><span class="line">render()</span><br><span class="line">getSnapshotBeforeUpdate()</span><br><span class="line">在最近一次渲染输出（提交到 DOM 节点）之前调用。它使得组件能在发生更改之前从 DOM 中捕获一些信息（例如，滚动位置）。此生命周期的任何返回值将作为参数传递给componentDidUpdate()</span><br><span class="line">componentDidUpdate()</span><br><span class="line"></span><br><span class="line">componentWillUpdate() // 该方法即将过期，避免使用</span><br><span class="line">componentWillReceiveProps() // 该方法即将过期，避免使用</span><br><span class="line"></span><br><span class="line">组件卸载</span><br><span class="line">componentWillUnmount()</span><br><span class="line"></span><br><span class="line">错误处理</span><br><span class="line">static getDerivedStateFromError()</span><br><span class="line">componentDidCatch()</span><br><span class="line"></span><br><span class="line">forceUpdate()</span><br><span class="line">默认情况下，当组件的 state 或 props 发生变化时，组件将重新渲染。如果 render() 方法依赖于其他数据，则可以调用 forceUpdate() 强制让组件重新渲染。</span><br><span class="line">调用 forceUpdate() 将致使组件调用 render() 方法，此操作会跳过该组件的 shouldComponentUpdate()。但其子组件会触发正常的生命周期方法，包括 shouldComponentUpdate() 方法。如果标记发生变化，React 仍将只更新 DOM。</span><br><span class="line">通常你应该避免使用 forceUpdate()，尽量在 render() 中使用 this.props 和 this.state。</span><br></pre></td></tr></table></figure>
+
+<p>4.pureComponent原理</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">组件更新时,如果 state和props都没有发生变化,render方法就不会触发,省去DOM生成和对比的过程,</span><br><span class="line">本质上只比较新值和旧值长度是否一样,每一个key是否都有,只比较了第一层的值,浅比较,深层次的嵌套数据对比不出来</span><br></pre></td></tr></table></figure>
+
+<p>5.一些js特殊情况</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">typeof NaN // “number”</span><br><span class="line">0.5+0.1 == 0.6 // true</span><br><span class="line">0.1+0.2 -- 0.3 // false 0.3000000000004</span><br><span class="line">[]+[] // &quot;&quot;</span><br><span class="line">[]==[] // false</span><br><span class="line">[]+&#123;&#125; //&quot;[object object]&quot;</span><br><span class="line">&#123;&#125;+[] // 0</span><br><span class="line">true+true+true === 3 // true</span><br><span class="line">true-true // 0</span><br><span class="line">true == 1 // true</span><br><span class="line">true === 1 // false</span><br><span class="line">9+&quot;1&quot; // &quot;91&quot;</span><br><span class="line">91-&quot;1&quot; // 90</span><br><span class="line"></span><br><span class="line">[]==0 // true</span><br><span class="line">正则不能比较,每个正则都是唯一的</span><br></pre></td></tr></table></figure>
+
+<p>6.性能调优</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">1. JavaScript线程的性能在开发模式下很糟糕,</span><br><span class="line">2. 使用React Navigation此类工具库来解决页面切换问题</span><br><span class="line">3. 发布版中屏蔽console.log</span><br><span class="line">4. 使用FlatList或SectionList来替代ListView,如果FlatList渲染慢,使用getItemLayout</span><br><span class="line">5. scrollView会一口气将其所有的子组件加载出来,需要合理利用</span><br><span class="line">6. 开发布局时减少View层的嵌套</span><br><span class="line">7. 合理利用shouldComponentUpdate来手动控制当前页面是否重绘,</span><br><span class="line">8. 利用PureComponent,如果state改变过程中做的浅拷贝,将不会做渲染</span><br><span class="line">9. 列表等重复组件设置key,在进行diff算法时,有key将会减少大量的遍历操作</span><br><span class="line">10. 在iOS上,修改Image组件的宽度或者高度,需要重新裁剪和缩放原始图片,性能开销特别大,此时建议使用 transform:[&#123;scale&#125;]</span><br><span class="line">11. 将setState放进setTimeout中延迟到下一轮中进行,能处理很多setState之后卡顿或者无响应的问题</span><br><span class="line">12. 内联引用(require代替import)可以实现文件或模块的懒加载,只有实际用到时才加载,可用于优化首屏渲染速度(比较新的RN源码已经改为了模块按需加载)</span><br><span class="line">13. 保持RN及react-navigation的版本更新,</span><br><span class="line">14. 减少更新或者合并多个更新</span><br><span class="line">15. InteractionManager.runAfterInteractions(()=&gt;&#123;&#125;) 在动画或者操作结束后执行  </span><br><span class="line">    this.requestAnimationFrame(()=&gt;&#123;&#125;) 在下一帧就立刻执行回调</span><br><span class="line">    setNativeProps 直接在低层更新Native组件属性,从而避免渲染组件结构和同步太多试图变化带来的大料开销,虽然带来性能提升,但是会让代码逻辑混乱</span><br><span class="line">16. 使用动画来是变化连贯,提升体验 LayoutAnimation</span><br><span class="line">17. 本地化分包,bundle体积过大会导致加载慢</span><br><span class="line">18. 习惯设置默认值,判断对象是否存在,判断数组长度等操作</span><br><span class="line">19. 导入Redux 或者 Mobx 框架(个人尝试后觉得Mobx框架对性能及易用性提升更显著)</span><br><span class="line">20. 尝试使用Hooks制作函数组件能有效提升性能</span><br></pre></td></tr></table></figure>
+
+<p>7.this的作用域</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 在函数体外,this指的是window对象</span><br><span class="line">2. 在函数体内,谁调用函数,this就指向谁</span><br><span class="line">3. 构造函数内,this指新创建的对象</span><br><span class="line">4. 在html的标签中,this指的是当前的这个标签元素</span><br><span class="line">5. 在ES6中,对于箭头函数,本身无this,所以看它创建的位置,和当前函数的作用域,</span><br></pre></td></tr></table></figure>
+
+<p>8.<strong>diff 算法</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">eact 通过setState界面刷新时，并不会马上对所有真实的 DOM 节点进行操作，而是先通过 diff 算法计算。然后，再对有变化的 DOM 节点进行操作（native 是对原生 UI 层进行操作），具体刷新步骤如下：</span><br><span class="line">1.state 变化，生成新的 Virtual Dom；</span><br><span class="line">2.比较 Virtual Dom 与之前 Virtual Dom 的异同；</span><br><span class="line">3.生成差异对象；</span><br><span class="line">4.遍历差异对象并更新真实 DOM；</span><br><span class="line"></span><br><span class="line">DOM 操作很耗时，使用 JS 对象来模拟 DOM Tree，在渲染更新时，先对 JS 对象进行操作，再批量将 JS 对象 Virtual Dom 渲染成 DOM Tree，从而减少对 DOM 的操作，提升性能</span><br><span class="line"></span><br><span class="line">Virtual Dom 本质是用来模拟 DOM 的 JS 对象。一般含有标签名（tag）、属性（props）和子元素对象（children）三个属性</span><br><span class="line"></span><br><span class="line">React Diff 算法相对于传统的 diff 算法，复杂度从 O(n^3)降到 O(n)</span><br><span class="line">React基于以下的两个假设，减少了不必要的计算：</span><br><span class="line">1.两个相同组件将会生成相似的DOM结构，两个不同组件将会生成不同的DOM结构。</span><br><span class="line">2.对于同一层次的一组子节点，它们可以通过唯一的id进行区分。</span><br><span class="line"></span><br><span class="line">对于假设 1: 两个相同组件，一般指的是相同的类，包含 React 官方定义的组件（View，Text）和程序员自定义的组件（这也是React 组件化开发的一个原因，可以提升 diff 算法的效率）；</span><br><span class="line">对于假设 2: 一般指的是使用map遍历生成的列表视图或者使用ListView/FlatList等列表组件；</span><br><span class="line"></span><br><span class="line">相同类型节点的比较：</span><br><span class="line">由于新旧节点类型相同，DOM 结构没有发生变化，仅对属性（style）进行重设从而实现节点的转换和界面的更新，这种情况，通过这类diff算法计算后，会调用 Native的 updateView 来刷新界面</span><br><span class="line"></span><br><span class="line">不同节点类型的比较：</span><br><span class="line">首先抽象成 DOM tree 节点模型，然后从父节点到子节点意义对比，最后确定需要更新的节点最小单位</span><br><span class="line">通过这类diff算法计算后，会调用 Native的 manageChildren 来刷新界面</span><br><span class="line"></span><br><span class="line">列表节点的比较：</span><br><span class="line">在渲染列表节点时，它们一般都有相同的结构，只是内容有些不同而已，常见的，如使用map遍历生成的列表视图或者ListView/FlatList等列表组件，如果开发的时候没有写 key，编译器会给出警告提示</span><br><span class="line">通过唯一的 key 进行区分，通过给每个节点添加唯一的 key，可以极大的简化 diff 算法，减少对 DOM 的操作。列表节点的比较主要有添加节点、删除节点、节点排序三种场景，js层diff算法计算后，会调用 Native的 manageChildren 来刷新界面</span><br></pre></td></tr></table></figure>
+
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/03/30/28/">
+        React Native | 性能优化总结
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-03-30 00:00:00" datetime="2021-03-29T16:00:00.000Z" itemprop="datePublished">
+  2021-03-30
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactNative/" rel="tag">ReactNative</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="ReactNative-性能优化"><a href="#ReactNative-性能优化" class="headerlink" title="ReactNative 性能优化"></a>ReactNative 性能优化</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">1. JavaScript线程的性能在开发模式下很糟糕,</span><br><span class="line"></span><br><span class="line">2. 使用React Navigation此类工具库来解决页面切换问题</span><br><span class="line"></span><br><span class="line">3. 发布版中屏蔽console.log</span><br><span class="line"></span><br><span class="line">4. 使用FlatList或SectionList来替代ListView,如果FlatList渲染慢,使用getItemLayout</span><br><span class="line"></span><br><span class="line">5. scrollView会一口气将其所有的子组件加载出来,需要合理利用</span><br><span class="line"></span><br><span class="line">6. 开发布局时减少View层的嵌套</span><br><span class="line"></span><br><span class="line">7. 合理利用shouldComponentUpdate来手动控制当前页面是否重绘,</span><br><span class="line"></span><br><span class="line">8. 利用PureComponent,如果state改变过程中做的浅拷贝,将不会做渲染</span><br><span class="line"></span><br><span class="line">9. 列表等重复组件设置key,在进行diff算法时,有key将会减少大量的遍历操作</span><br><span class="line"></span><br><span class="line">10. 在iOS上,修改Image组件的宽度或者高度,需要重新裁剪和缩放原始图片,性能开销特别大,此时建议使用 transform:[&#123;scale&#125;]</span><br><span class="line"></span><br><span class="line">11. 将setState放进setTimeout中延迟到下一轮中进行,能处理很多setState之后卡顿或者无响应的问题</span><br><span class="line"></span><br><span class="line">12. 内联引用(require代替import)可以实现文件或模块的懒加载,只有实际用到时才加载,可用于优化首屏渲染速度(比较新的RN源码已经改为了模块按需加载)</span><br><span class="line"></span><br><span class="line">13. 保持RN及react-navigation的版本更新,</span><br><span class="line"></span><br><span class="line">14. 减少更新或者合并多个更新</span><br><span class="line"></span><br><span class="line">15. InteractionManager.runAfterInteractions(()=&gt;&#123;&#125;) 在动画或者操作结束后执行  </span><br><span class="line"></span><br><span class="line">    this.requestAnimationFrame(()=&gt;&#123;&#125;) 在下一帧就立刻执行回调</span><br><span class="line"></span><br><span class="line">    setNativeProps 直接在低层更新Native组件属性,从而避免渲染组件结构和同步太多试图变化带来的大料开销,虽然带来性能提升,但是会让代码逻辑混乱</span><br><span class="line"></span><br><span class="line">16. 使用动画来是变化连贯,提升体验 LayoutAnimation</span><br><span class="line"></span><br><span class="line">17. 本地化分包,bundle体积过大会导致加载慢</span><br><span class="line"></span><br><span class="line">18. 习惯设置默认值,判断对象是否存在,判断数组长度等操作</span><br><span class="line"></span><br><span class="line">19. 导入Redux 或者 Mobx 框架(个人尝试后觉得Mobx框架对性能及易用性提升更显著)</span><br><span class="line"></span><br><span class="line">20. 尝试使用Hooks制作函数组件能有效提升性能</span><br></pre></td></tr></table></figure>
+
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/01/28/27/">
+        React Native | iOS热更新引入
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-01-28 00:00:00" datetime="2021-01-27T16:00:00.000Z" itemprop="datePublished">
+  2021-01-28
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactNative/" rel="tag">ReactNative</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="iOS热更新"><a href="#iOS热更新" class="headerlink" title="iOS热更新"></a>iOS热更新</h2><h4 id="ReactNative-原理及热更新"><a href="#ReactNative-原理及热更新" class="headerlink" title="ReactNative 原理及热更新"></a>ReactNative 原理及热更新</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">在 React 框架中，JSX 源码通过 React 框架最终渲染到了浏览器的真实 DOM 中，</span><br><span class="line"></span><br><span class="line">而在 React Native 框架中，JSX 源码通过 React Native 框架编译后，通过对应平台的 Bridge 实现了与原生框架的通信</span><br><span class="line"></span><br><span class="line">因为 React Native 的底层为 React 框架，所以如果是 UI 层的变更，那么就映射为虚拟 DOM 后进行 diff 算法，diff 算法计算出变动后的 JSON 映射文件，最终由 Native 层将此 JSON 文件映射渲染到原生 App 的页面元素上，最终实现了在项目中只需要控制 state 以及 props 的变更来引起 iOS 与 Android 平台的 UI 变更。</span><br><span class="line"></span><br><span class="line">编写的 React Native代码最终会打包生成一个 main.bundle.js 文件供 App 加载，此文件可以在 App 设备本地，也可以存放于服务器上供 App 下载更新</span><br><span class="line"></span><br><span class="line">本质上还是一个ReactNative App加载main.bundle的模型,main.bundle可以被替换(热更新)</span><br><span class="line"></span><br><span class="line">React Native 采用了 JavaScriptCore 作为 JS VM，中间通过 JSON 文件与 Bridge 进行通信,在使用 Chrome 浏览器进行调试时，那么所有的 JavaScript 代码都将运行在 Chrome 的 V8 引擎中，(即调试模式会起一个node.js窗口)与原生代码通过 WebSocket 进行通信</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p>React Native 的核心驱动力来自于 JS Engine,所有的js和jsx代码都会被JS Engine来执行,在iOS上,即来自webKit的JavaScriptCore</p>
+<hr>
+<p>JavaScript在React Native里非常重要:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.负责管理UI component的生命周期,管理Virtual DOM</span><br><span class="line">2.所有的业务逻辑都是用js来实现或衔接</span><br><span class="line">3.调用原生代码来操控原生组件</span><br><span class="line">4.js本身无绘图能力,都是通过给原生组件发指令来完成</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p>React Native应用启动时有以下三个任务并行完成:</p>
+<p>1.<strong>加载JavaScript打包文件</strong>，React Native的打包工具会像Webpack和Browserify一样把代码连同全部依赖打包成单个文件</p>
+<p>2.与此同时，React Native开始<strong>加载原生模块</strong>。一旦某个原生模块完成加载就在桥接层注册，桥接层确认该模块。此时整个应用便知道该模块已可用并能创建该模块的实例</p>
+<p>3.<strong>启动JavaScript虚拟机</strong>，提供JavaScript代码的执行环境</p>
+<hr>
+<p>Bridge的作用就是给RN内嵌的JS Engine提供原生接口的扩展供JS调用,所有的原生功能都是通过Bridge封装城JS接口后注入JS Engine供JS调用</p>
+<hr>
+<p>React Native有三个重要的线程:</p>
+<p>1.Shadow queue 布局引擎(yoga)计算布局</p>
+<p>2.Main thread主线程,操作系统的UI线程</p>
+<p>3.Javascript thread. JavaScript线程,因为js是单线程模型,event驱动的异步模型,所以有此独立的js线程,所有的js和原生代码的交互都发生在这个线程里</p>
+<hr>
+<p>React Native启动流程iOS</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1.创建RCTRootView //设置窗口根控制器View,在界面上显示RN的主View</span><br><span class="line">2.创建RCTBridge //桥接对象,管理JS和OC交互,做中转</span><br><span class="line">3.创建RCTBatchBridge // 批量桥接对象,JS和OC交互具体实现在此</span><br><span class="line">4.执行[RCTBatchBridge loadSource] //加载js源码</span><br><span class="line">5.执行[RCTBatchBridge initModulesWithDispatchGroup] // 创建OC模块表</span><br><span class="line">6.执行[RCTJSCExecutor injectJSONText] 往JS中插入OC模块表</span><br><span class="line">7.执行完js代码,回调OC,调用OC中的组件</span><br><span class="line">8.完成UI渲染</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2020/12/16/25/">
+        React Native | 读iOS源码
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2020-12-16 00:00:00" datetime="2020-12-15T16:00:00.000Z" itemprop="datePublished">
+  2020-12-16
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactNative/" rel="tag">ReactNative</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="ReactNative-的本质"><a href="#ReactNative-的本质" class="headerlink" title="ReactNative 的本质"></a><strong>ReactNative 的本质</strong></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">是在 JS 端编写 React 代码，通过 JavaScriptCore 引擎，把 JS 端编写的组件和事件转换成 Native 原生组件进行渲染  </span><br><span class="line"></span><br><span class="line">React 编写代码(跨端，热更新) -&gt; JSCore引擎解析JS代码(内存消耗，性能消耗) -&gt;映射成Native组件(Native性能)</span><br><span class="line"></span><br><span class="line">ReactNative 启动是从创建一个 RCTRootView 作为入口视图容器开始运作的，创建 RCTRootView 时，会先创建一个 JSBridge 作为 Native 端与 JS 端交互的桥梁。整个 RN 的启动工作基本都是在创建 JSBridge 时做的。  </span><br><span class="line"></span><br><span class="line">JSBridge 的核心是 RCTBatchedBridge ，JSBridge 的工作主要在 RCTBatchedBridge 初始化中处理。启动流程采用 GCD 来进行多线程操作，其中大部分耗时操作是在并发队列com.facebook.react.RCTBridgeQueue中</span><br><span class="line"></span><br><span class="line">RCTBatchedBridge 启动主要进行六个准备工作：</span><br><span class="line"><span class="number">1.</span>加载 JSBundle 代码（并行队列异步执行）</span><br><span class="line">将 JavaScript 源码加载到内存中，方便之后注入和执行，这一步中，React 中的 JSX 语法已经转换成 JavaScript</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span>初始化 Native Modules（同步执行）</span><br><span class="line">同步初始化所有不能被懒加载的供 JS 端调用的 Native 模块</span><br><span class="line">找到所有 Native 需要暴露给 JavaScript 的类（即被标记有宏：RCT_EXPORT_MODULE()的类），方便后面把这些模块信息注入 JS 端</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>初始化 JSCExecutor（与第<span class="number">4</span>步在同一并行队列同时执行）</span><br><span class="line">JSCExecutor 是JavaScriptCore引擎，负责JS端和Native端的通信</span><br><span class="line">初始化时，创建一个优先级跟主线程优先级同级的单独 JS 线程，同时创建一个 Runloop，让 JS 线程能循环执行不会退出</span><br><span class="line">初始化时，通过 JavaScriptCore 作为引擎，创建 JS 执行的上下文环境，并向 JS 上下文中注入 JS 与 Native 通信的方法</span><br><span class="line"></span><br><span class="line"><span class="number">4.</span>创建 Module 配置表（与第<span class="number">3</span>步在同一并行队列同时执行）</span><br><span class="line">Module 配置表: 把所有模块信息集中收集起来，保存到一个数组中，经过序列化后，注入到JS中。JS 端通过 Native端注入的 nativeRequireModuleConfig 方法，根据 <span class="built_in">module</span> 名可以查询该模块配置信息</span><br><span class="line">创建 Module 配置表，与初始化 JSCExecutor 的操作一起被加入并发队列</span><br><span class="line"></span><br><span class="line"><span class="number">5.</span>注入 Module 配置信息到 JSCExecutor（第<span class="number">3</span>、<span class="number">4</span>步执行完再执行）</span><br><span class="line">当初始化 JSCExecutor 和创建 Module 配置表工作都准备好后，会将 <span class="built_in">module</span> 模块配置信息注入 JS 端</span><br><span class="line"></span><br><span class="line"><span class="number">6.</span>执行 JSBundle 代码（前<span class="number">5</span>步都执行完再执行）</span><br><span class="line">以上五步操作都执行完成后，执行 JSBundle 中的 JavaScript 源码。至此，JavaScript 和 Objective-C 都具备了向对方交互的能力，启动流程的准备工作算是全部完成了。</span><br><span class="line">启动完成之后，就会进入渲染层，渲染层分js层和native两部分</span><br><span class="line"></span><br><span class="line">JS 层渲染 diff 算法</span><br><span class="line">React 通过setState界面刷新时，并不会马上对所有真实的 DOM 节点进行操作，而是先通过 diff 算法计算。然后，再对有变化的 DOM 节点进行操作（native 是对原生 UI 层进行操作），具体刷新步骤如下：</span><br><span class="line"><span class="number">1.</span>state 变化，生成新的 Virtual Dom；</span><br><span class="line"><span class="number">2.</span>比较 Virtual Dom 与之前 Virtual Dom 的异同；</span><br><span class="line"><span class="number">3.</span>生成差异对象；</span><br><span class="line"><span class="number">4.</span>遍历差异对象并更新真实 DOM；</span><br><span class="line"></span><br><span class="line">DOM 操作很耗时，使用 JS 对象来模拟 DOM Tree，在渲染更新时，先对 JS 对象进行操作，再批量将 JS 对象 Virtual Dom 渲染成 DOM Tree，从而减少对 DOM 的操作，提升性能</span><br><span class="line"></span><br><span class="line">Virtual Dom 本质是用来模拟 DOM 的 JS 对象。一般含有标签名（tag）、属性（props）和子元素对象（children）三个属性</span><br><span class="line"></span><br><span class="line">React Diff 算法相对于传统的 diff 算法，复杂度从 O(n^<span class="number">3</span>)降到 O(n)</span><br><span class="line">React基于以下的两个假设，减少了不必要的计算：</span><br><span class="line"><span class="number">1.</span>两个相同组件将会生成相似的DOM结构，两个不同组件将会生成不同的DOM结构。</span><br><span class="line"><span class="number">2.</span>对于同一层次的一组子节点，它们可以通过唯一的id进行区分。</span><br><span class="line"></span><br><span class="line">对于假设 <span class="number">1</span>: 两个相同组件，一般指的是相同的类，包含 React 官方定义的组件（View，Text）和程序员自定义的组件（这也是React 组件化开发的一个原因，可以提升 diff 算法的效率）；</span><br><span class="line">对于假设 <span class="number">2</span>: 一般指的是使用map遍历生成的列表视图或者使用ListView/FlatList等列表组件；</span><br><span class="line"></span><br><span class="line">相同类型节点的比较：</span><br><span class="line">由于新旧节点类型相同，DOM 结构没有发生变化，仅对属性（style）进行重设从而实现节点的转换和界面的更新，这种情况，通过这类diff算法计算后，会调用 Native的 updateView 来刷新界面</span><br><span class="line"></span><br><span class="line">不同节点类型的比较：</span><br><span class="line">首先抽象成 DOM tree 节点模型，然后从父节点到子节点意义对比，最后确定需要更新的节点最小单位</span><br><span class="line">通过这类diff算法计算后，会调用 Native的 manageChildren 来刷新界面</span><br><span class="line"></span><br><span class="line">列表节点的比较：</span><br><span class="line">在渲染列表节点时，它们一般都有相同的结构，只是内容有些不同而已，常见的，如使用map遍历生成的列表视图或者ListView/FlatList等列表组件，如果开发的时候没有写 key，编译器会给出警告提示</span><br><span class="line">通过唯一的 key 进行区分，通过给每个节点添加唯一的 key，可以极大的简化 diff 算法，减少对 DOM 的操作。列表节点的比较主要有添加节点、删除节点、节点排序三种场景，js层diff算法计算后，会调用 Native的 manageChildren 来刷新界面</span><br><span class="line"></span><br><span class="line">AppRegistry</span><br><span class="line">而在React Native 中，AppRegistry是RN应用的入口函数。</span><br><span class="line">AppRegistry负责注册运行React Native应用程序的JaveScript入口，程序入口组件使用AppRegistry.registerComponent来注册。当注册完应用程序组件后，Native系统（OC）就会加载jsbundle文件并触发AppRegistry.runApplication运行应用</span><br></pre></td></tr></table></figure>
+
+<p>其他：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Javascript 严格模式</span><br><span class="line">use strict</span><br><span class="line">目的：</span><br><span class="line">消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;</span><br><span class="line">消除代码运行的一些不安全之处，保证代码运行的安全；</span><br><span class="line">提高编译器效率，增加运行速度；</span><br><span class="line">为未来新版本的Javascript做好铺垫。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Component和PureComponent</span><br><span class="line"></span><br><span class="line">React.PureComponent 与 React.Component 几乎完全相同，但 React.PureComponent 通过props和state的浅对比来实现 shouldComponentUpdate()</span><br><span class="line">在PureComponent中，如果包含比较复杂的数据结构，可能会因深层的数据不一致而产生错误的否定判断，导致界面得不到更新。</span><br><span class="line">如果定义了 shouldComponentUpdate()，无论组件是否是 PureComponent，它都会执行shouldComponentUpdate()，并根据结果来判断是否 update。如果组件未实现 shouldComponentUpdate() ，则会判断该组件是否是 PureComponent，如果是的话，会对新旧 props、state 进行 shallowEqual 比较，一旦新旧不一致，会触发 update</span><br><span class="line"></span><br><span class="line">在React Native中尺寸是没有单位的，它代表了设备独立像素</span><br></pre></td></tr></table></figure>
+
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2020/10/15/24/">
+        React Native | 基础及生命周期(新)
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2020-10-15 00:00:00" datetime="2020-10-14T16:00:00.000Z" itemprop="datePublished">
+  2020-10-15
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactNative/" rel="tag">ReactNative</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="React组件的生命周期-最新版"><a href="#React组件的生命周期-最新版" class="headerlink" title="React组件的生命周期(最新版)"></a>React组件的生命周期(最新版)</h2><p><strong>Render()</strong> </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在某一时间节点调用 React 的 render() 方法，会创建一棵由 React 元素组成的树。在下一次 state 或 props 更新时，相同的 render() 方法会返回一棵不同的树。React 需要基于这两棵树之间的差别来判断如何有效率的更新 UI 以保证当前 UI 与最新的树保持同步。</span><br></pre></td></tr></table></figure>
+
+<p><strong>Diffing算法</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">当对比两颗树时，React 首先比较两棵树的根节点。不同类型的根节点元素会有不同的形态。当根节点为不同类型的元素时，React 会拆卸原有的树并且建立起新的树。当拆卸一棵树时，对应的 DOM 节点也会被销毁。组件实例将执行 componentWillUnmount() 方法。当建立一棵新的树时，对应的 DOM 节点会被创建以及插入到 DOM 中。组件实例将执行 componentWillMount() 方法，紧接着 componentDidMount() 方法。所有跟之前的树所关联的 state 也会被销毁。在根节点以下的组件也会被卸载，它们的状态会被销毁</span><br><span class="line">当比对两个相同类型的 React 元素时，React 会保留 DOM 节点，仅比对及更新有改变的属性。当一个组件更新时，组件实例保持不变，这样 state 在跨越不同的渲染时保持一致。React 将更新该组件实例的 props 以跟最新的元素保持一致，并且调用该实例的 componentWillReceiveProps() 和 componentWillUpdate() 方法。下一步，调用 render() 方法，diff 算法将在之前的结果以及新的结果中进行递归。</span><br><span class="line">在默认条件下，当递归 DOM 节点的子元素时，React 会同时遍历两个子元素的列表；当产生差异时，生成一个 mutation。在子元素列表末尾新增元素时，更变开销比较小</span><br><span class="line">使用 key 来匹配原有树上的子元素以及最新树上的子元素 来解决头部插入比尾部插入开销大的问题，这个策略在元素不进行重新排序时比较合适，但一旦有顺序修改，diff 就会变得慢</span><br></pre></td></tr></table></figure>
+
+<p><strong>组件的生命周期(新)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">当组件实例被创建并插入 DOM 中时，其生命周期调用顺序如下</span><br><span class="line">constructor()</span><br><span class="line">static getDerivedStateFromProps()</span><br><span class="line">会在调用 render 方法之前调用，并且在初始挂载及后续更新时都会被调用。它应返回一个对象来更新 state，如果返回 null 则不更新任何内容。</span><br><span class="line">render()</span><br><span class="line">componentDidMount()</span><br><span class="line"></span><br><span class="line">componentWillMount() // 该方法即将过期，避免使用</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">当组件的 props 或 state 发生变化时会触发更新。组件更新的生命周期调用顺序如下</span><br><span class="line">static getDerivedStateFromProps()</span><br><span class="line">shouldComponentUpdate()</span><br><span class="line">render()</span><br><span class="line">getSnapshotBeforeUpdate()</span><br><span class="line">在最近一次渲染输出（提交到 DOM 节点）之前调用。它使得组件能在发生更改之前从 DOM 中捕获一些信息（例如，滚动位置）。此生命周期的任何返回值将作为参数传递给componentDidUpdate()</span><br><span class="line">componentDidUpdate()</span><br><span class="line"></span><br><span class="line">componentWillUpdate() // 该方法即将过期，避免使用</span><br><span class="line">componentWillReceiveProps() // 该方法即将过期，避免使用</span><br><span class="line"></span><br><span class="line">组件卸载</span><br><span class="line">componentWillUnmount()</span><br><span class="line"></span><br><span class="line">错误处理</span><br><span class="line">static getDerivedStateFromError()</span><br><span class="line">componentDidCatch()</span><br><span class="line"></span><br><span class="line">forceUpdate()</span><br><span class="line">默认情况下，当组件的 state 或 props 发生变化时，组件将重新渲染。如果 render() 方法依赖于其他数据，则可以调用 forceUpdate() 强制让组件重新渲染。</span><br><span class="line">调用 forceUpdate() 将致使组件调用 render() 方法，此操作会跳过该组件的 shouldComponentUpdate()。但其子组件会触发正常的生命周期方法，包括 shouldComponentUpdate() 方法。如果标记发生变化，React 仍将只更新 DOM。</span><br><span class="line">通常你应该避免使用 forceUpdate()，尽量在 render() 中使用 this.props 和 this.state。</span><br></pre></td></tr></table></figure>
+
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2020/07/08/23/">
+        React Native | Hooks
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2020-07-08 00:00:00" datetime="2020-07-07T16:00:00.000Z" itemprop="datePublished">
+  2020-07-08
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactNative/" rel="tag">ReactNative</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="Hooks及其他解决方案"><a href="#Hooks及其他解决方案" class="headerlink" title="Hooks及其他解决方案"></a>Hooks及其他解决方案</h2><p><strong>HOC高阶组件</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">双向绑定</span><br><span class="line">不要在render方法内创建高阶组件</span><br><span class="line">React Diff 算法的原则是：</span><br><span class="line">	使用组件表示标识符确定是渲染还是更新组件</span><br><span class="line">	如果组件的和前一次渲染时标识是相同的，递归更新子组件</span><br><span class="line">	如果标识不同卸载组件重新挂载新组件</span><br><span class="line"></span><br><span class="line">高阶组件就是一个没有副作用的纯函数，各个高阶组件不会相互依赖耦合</span><br><span class="line">所以使用高阶组件时不要改变原始组件</span><br><span class="line">高阶组件并不关心数据使用的方式和原因，而被包裹的组件也不关心数据来自何处。高阶组件的增加不会为原组件增加负担</span><br><span class="line"></span><br><span class="line">HOC缺陷：</span><br><span class="line">需要在原组件上进行包裹或者嵌套，如果大量使用HOC，将会产生非常多的嵌套，这让调试变得非常困难。</span><br><span class="line">可以劫持props，在不遵守约定的情况下也可能造成冲突</span><br></pre></td></tr></table></figure>
+
+<p><strong>Redux</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">要想更新 state 中的数据，你需要发起一个 action。action 就是一个普通 JavaScript 对象</span><br><span class="line">强制使用 action 来描述所有变化带来的好处是可以清晰地知道应用中到底发生了什么,action 就像是描述发生了什么的指示器,为了把 action 和 state 串起来，开发一些函数，这就是 reducer,reducer 只是一个接收 state 和 action，并返回新的 state 的函数,</span><br><span class="line"></span><br><span class="line">单向数据流</span><br><span class="line">当我们有多个组件需要共享和使用相同state时，可能会变得很复杂，尤其是当这些组件位于应用程序的不同部分时, 有时这可以通过 提升state 到父组件来解决，但这并不总是有效，解决这个问题的一种方法是从组件中提取共享 state，并将其放入组件树之外的一个集中位置。这样，我们的组件树就变成了一个大“view”，任何组件都可以访问 state 或触发 action，无论它们在树中的哪个位置，通过定义和分离 state 管理中涉及的概念并强制执行维护 view 和 state 之间独立性的规则，代码变得更结构化和易于维护，</span><br><span class="line">这就是 Redux 背后的基本思想：</span><br><span class="line">应用中使用集中式的全局状态来管理，并明确更新状态的模式，以便让代码具有可预测性</span><br><span class="line"></span><br><span class="line">Redux 期望所有状态更新都是使用不可变的方式</span><br><span class="line"></span><br><span class="line">action 是一个具有 type 字段的普通 JavaScript 对象。可以将 action 视为描述应用程序中发生了什么的事件</span><br><span class="line"></span><br><span class="line">type 字段是一个字符串，给这个 action 一个描述性的名字，比如&quot;todos/todoAdded&quot;。我们通常把那个类型的字符串写成“域/事件名称”，其中第一部分是这个 action 所属的特征或类别，第二部分是发生的具体事情，action 对象可以有其他字段，其中包含有关发生的事情的附加信息。按照惯例，我们将该信息放在名为 payload 的字段中</span><br><span class="line"></span><br><span class="line">action creator 是一个创建并返回一个 action 对象的函数。它的作用是让你不必每次都手动编写 action 对象</span><br><span class="line"></span><br><span class="line">reducer 是一个函数，接收当前的 state 和一个 action 对象，必要时决定如何更新状态，并返回新状态。函数签名是：(state, action) =&gt; newState。 你可以将 reducer 视为一个事件监听器，它根据接收到的 action（事件）类型处理事件</span><br><span class="line">Reducer 必需符合以下规则：	</span><br><span class="line">1.仅使用 state 和 action 参数计算新的状态值</span><br><span class="line">2.禁止直接修改 state。必须通过复制现有的 state 并对复制的值进行更改的方式来做 不可变更新</span><br><span class="line">3.禁止任何异步逻辑、依赖随机值或导致其他“副作用”的代码</span><br><span class="line"></span><br><span class="line">Store</span><br><span class="line">当前 Redux 应用的状态存在于一个名为 store 的对象中</span><br><span class="line">store 是通过传入一个 reducer 来创建的，并且有一个名为 getState 的方法，它返回当前状态值</span><br><span class="line"></span><br><span class="line">Dispatch</span><br><span class="line">Redux store 有一个方法叫 dispatch。更新 state 的唯一方法是调用 store.dispatch() 并传入一个 action 对象。 store 将执行所有 reducer 函数并计算出更新后的 state，调用 getState() 可以获取新 state</span><br><span class="line">dispatch 一个 action 可以形象的理解为 &quot;触发一个事件&quot;。发生了一些事情，我们希望 store 知道这件事。 Reducer 就像事件监听器一样，当它们收到关注的 action 后，它就会更新 state 作为响应</span><br><span class="line"></span><br><span class="line">Selector 函数可以从 store 状态树中提取指定的片段。随着应用变得越来越大，会遇到应用程序的不同部分需要读取相同的数据，selector 可以避免重复这样的读取逻辑</span><br><span class="line"></span><br><span class="line">Redux (单向)数据流</span><br><span class="line">初始启动: 使用最顶层的 root reducer 函数创建 Redux store,	store 调用一次 root reducer，并将返回值保存为它的初始 state, 当 UI 首次渲染时，UI 组件访问 Redux store 的当前 state，并使用该数据来决定要呈现的内容。同时监听 store 的更新，以便他们可以知道 state 是否已更改</span><br><span class="line">更新环节:  应用程序中发生了某些事情，例如用户单击按钮, 然后dispatch 一个 action 到 Redux store,store 用之前的 state 和当前的 action 再次运行 reducer 函数，并将返回值保存为新的 state,store 通知所有订阅过的 UI，通知它们 store 发生更新,每个订阅过 store 数据的 UI 组件都会检查它们需要的 state 部分是否被更新,	发现数据被更新的每个组件都强制使用新数据重新渲染，紧接着更新网页</span><br><span class="line"></span><br><span class="line">用 Thunk 编写异步逻辑</span><br><span class="line">thunk 是一种特定类型的 Redux 函数，可以包含异步逻辑。Thunk 是使用两个函数编写的</span><br><span class="line">一个内部 thunk 函数，它以 dispatch 和 getState 作为参数,	外部创建者函数，它创建并返回 thunk 函数</span><br><span class="line"></span><br><span class="line">Actions 是用来描述在 app 中发生了什么的普通对象，并且是描述突变数据意图的唯一途径。很重要的一点是 不得不 dispatch 的 action 对象并非是一个样板代码，而是 Redux 的一个 基本设计原则</span><br><span class="line"></span><br><span class="line">三大原则</span><br><span class="line">1.单一数据源 </span><br><span class="line">2.State只读 </span><br><span class="line">3.使用纯函数来执行修改</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>MobX</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">通过透明的函数响应式编程使得状态管理变得简单和可扩展</span><br><span class="line">背后的哲学很简单: 任何源自应用状态的东西都应该自动地获得。其中包括UI、数据序列化、服务器通讯</span><br><span class="line"></span><br><span class="line">@observable</span><br><span class="line">@computed</span><br><span class="line">@observer</span><br><span class="line">@action</span><br><span class="line"></span><br><span class="line">MobX 使用原生 javascript 。由于它的侵入性不强，它可以和绝大部分 javascript 库共同使用，而不需要特定的 MobX 风格库</span><br><span class="line">MobX 不是一个框架。它不会告诉你如何去组织你的代码，在哪存储状态或者如何处理事件。然而，它可能将你从以性能的名义对你的代码提出各种限制的框架中解放出来</span><br><span class="line">MobX 是框架无关的，可以应用在任何现代JS环境中。 为了方便起见，它只是用一个小函数来将 ReactJS 组件转换为响应式视图函数</span><br><span class="line"></span><br><span class="line">对比Redux</span><br><span class="line">1. Mobx写法上更偏向于OOP</span><br><span class="line">2. 对一份数据直接进行修改操作，不需要始终返回一个新的数据</span><br><span class="line">3. 对typescript的支持更好一些</span><br><span class="line">4. 相关的中间件很少，逻辑层业务整合是一个问题</span><br></pre></td></tr></table></figure>
+
+<p><strong>Hooks</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">React为什么要搞一个Hooks</span><br><span class="line">复用一个有状态的组件太麻烦,react都核心思想就是，将一个页面拆成一堆独立的，可复用的组件，并且用自上而下的单向数据流的形式将这些组件串联起来。但假如你在大型的工作项目中用react，你会发现你的项目中实际上很多react组件冗长且难以复用。尤其是那些写成class的组件，它们本身包含了状态（state），所以复用这类组件就变得很麻烦, 之前官方推荐的解决方案是使用渲染属性(Render Props) 和高阶组件 (HOC Higher-Order Components) </span><br><span class="line"></span><br><span class="line">useEffect中定义的副作用函数的执行不会阻碍浏览器更新视图，也就是说这些函数是异步执行的，而之前的componentDidMount或componentDidUpdate中的代码则是同步执行的。这种安排对大多数副作用说都是合理的</span><br><span class="line"></span><br><span class="line">使用范围：只能在React函数式组件或自定义Hook中使用Hook</span><br><span class="line">不要在循环，条件或嵌套函数中调用Hook</span><br><span class="line">Hook通过数组实现的，每次useState 都会改变下标，React需要利用调用顺序来正确更新相应的状态，如果useState 被包裹循环或条件语句中，那每就可能会引起调用顺序的错乱，从而造成意想不到的错误。</span><br><span class="line"></span><br><span class="line">使用Hook的动机</span><br><span class="line">减少状态逻辑复用的风险</span><br><span class="line">避免地狱式嵌套</span><br><span class="line">让组件更容易理解</span><br><span class="line">使用函数代替class</span><br><span class="line"></span><br><span class="line">React 没有提供将可复用性行为“附加”到组件的途径</span><br><span class="line">一些解决此类问题的方案，比如 render props 和 高阶组件，由 providers，consumers，高阶组件，render props 等其他抽象层组成的组件会形成“嵌套地狱”，这说明了一个更深层次的问题：React 需要为共享状态逻辑提供更好的原生途径。</span><br><span class="line">使用 Hook 从组件中提取状态逻辑，使得这些逻辑可以单独测试并复用。Hook 使你在无需修改组件结构的情况下复用状态逻辑。 这使得在组件间或社区内共享 Hook 变得更便捷。</span><br><span class="line"></span><br><span class="line">只在最顶层使用 Hook，不要在循环，条件或嵌套函数中调用 Hook</span><br><span class="line">只在 React 函数中调用 Hook，不要在普通的 JavaScript 函数中调用 Hook</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">useEffect(() =&gt; &#123;</span><br><span class="line">	xxxx</span><br><span class="line">	return () =&gt; &#123; xxx &#125;</span><br><span class="line">&#125;,[yyy])</span><br><span class="line"> 相当于class组件中的  componentDidMount 和 componentDidUpdate:</span><br><span class="line">其中的 return函数相当于 componentWillUnmount</span><br><span class="line">第二个参数 [yyy] 则可限制仅在对 yyy 进行修改时更新， 作用类似于 shouldComponentUpdate</span><br><span class="line">如果执行只想运行一次的 effect ,类似 componentDidMount， 则传入空数组 []</span><br><span class="line">使用useEffect 调度的 effect 不会阻塞浏览器更新屏幕，让应用看起来反应更快</span><br><span class="line">一般情况下，effect不需要同步地执行</span><br><span class="line">特殊情况下，如测量布局，提供有 useLayoutEffect </span><br><span class="line">与 componentDidMount componentDidUpdate 不同，在浏览器完成布局和绘制之后，传给 useEffect的函数会延迟调用，因此不应该在函数中执行阻塞浏览器更新屏幕的操作</span><br><span class="line">然后，并非所有effect都要可以被延迟执行，例如，在浏览器执行下一次回之前，用户可见的DOM变更就必须同步执行，额外提供了 useLayoutEffect 来处理这类 effect， 它与 useEffect 结构相同，只是调用时机不同</span><br><span class="line">虽然 useEffect会在浏览器会之后延迟执行，但会爆炸在任何新渲染前执行</span><br><span class="line"></span><br><span class="line">useReducer</span><br><span class="line">useState 替代方案， 接受一个 (state, action) =&gt; newState 的 reducer，返回当前state及其配套 dispatch</span><br></pre></td></tr></table></figure>
+
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2020/05/10/26/">
+        React Native | Redux
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2020-05-10 00:00:00" datetime="2020-05-09T16:00:00.000Z" itemprop="datePublished">
+  2020-05-10
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactNative/" rel="tag">ReactNative</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h2><h3 id="1-目标"><a href="#1-目标" class="headerlink" title="1.目标"></a>1.目标</h3><p>目标是创建一个状态管理库，来提供最简化 API，但同时做到行为的完全可预测，因此才得以实现日志打印，热加载，时间旅行，同构应用，录制和重放，而不需要任何开发参与。</p>
+<h3 id="2-核心概念"><a href="#2-核心概念" class="headerlink" title="2.核心概念"></a>2.核心概念</h3><p>Store: 当使用普通对象来描述应用的 state 时,对象就像 “Model”,区别是它并没有 setter(修改器方法),因此其它的代码不能随意修改它,要想更新 state 中的数据，</p>
+<p>Action: 你需要发起一个 action,Action 就是一个普通 JavaScript 对象,用来描述发生了什么,强制使用 action 来描述所有变化带来的好处是可以清晰地知道应用中到底发生了什么,</p>
+<p>reducer: 最终,为了把 action 和 state 串起来,开发一些函数,这就是 reducer,reducer 只是一个接收 state 和 action,并返回新的 state 的函数</p>
+<h3 id="3-三大原则"><a href="#3-三大原则" class="headerlink" title="3.三大原则"></a>3.三大原则</h3><h4 id="单一数据源"><a href="#单一数据源" class="headerlink" title="单一数据源"></a>单一数据源</h4><p>整个应用的 state 被储存在一棵 object tree 中，并且这个 object tree 只存在于唯一一个 store 中,</p>
+<p>这让同构应用开发变得非常容易。来自服务端的 state 可以在无需编写更多代码的情况下被序列化并注入到客户端中。由于是单一的 state tree ，调试也变得非常容易。在开发中，你可以把应用的 state 保存在本地，从而加快开发速度。此外，受益于单一的 state tree ，以前难以实现的如“撤销/重做”这类功能也变得轻而易举。</p>
+<h4 id="State是只读的"><a href="#State是只读的" class="headerlink" title="State是只读的"></a>State是只读的</h4><p>唯一改变 state 的方法就是触发 action，action 是一个用于描述已发生事件的普通对象。</p>
+<p>这样确保了视图和网络请求都不能直接修改 state，相反它们只能表达想要修改的意图。因为所有的修改都被集中化处理，且严格按照一个接一个的顺序执行，因此不用担心 race condition 的出现。 Action 就是普通对象而已，因此它们可以被日志打印、序列化、储存、后期调试或测试时回放出来。</p>
+<h4 id="使用纯函数来执行修改"><a href="#使用纯函数来执行修改" class="headerlink" title="使用纯函数来执行修改"></a>使用纯函数来执行修改</h4><p>为了描述 action 如何改变 state tree ，你需要编写 reducers</p>
+<p>Reducer 只是一些纯函数，它接收先前的 state 和 action，并返回新的 state。刚开始你可以只有一个 reducer，随着应用变大，你可以把它拆成多个小的 reducers，分别独立地操作 state tree 的不同部分，因为 reducer 只是函数，你可以控制它们被调用的顺序，传入附加数据，甚至编写可复用的 reducer 来处理一些通用任务</p>
+<h3 id="4-数据流"><a href="#4-数据流" class="headerlink" title="4.数据流"></a>4.数据流</h3><p><strong>严格的单向数据流</strong>是 Redux 架构的设计核心。</p>
+<p>这意味着应用中所有的数据都遵循相同的生命周期，这样可以让应用变得更加可预测且容易理解。同时也鼓励做数据范式化，这样可以避免使用多个且独立的无法相互引用的重复数据。</p>
+<hr>
+<h2 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h2><p>redux是在最父级对象外包裹一层,并以最外层的state作为全局的变量用于状态管理,即Store,界面拿到这个store中的某个参数值作为可操作变量去确定界面的状态,当需要界面状态变化时,通过dispatch一个action来改变store中的指定状态,来达到更新对应界面的依赖状态值从而变更界面.</p>
+<p>意味着,如果一个组件的某个状态量被自全局store管理,可以在整个App任意地方去dispatch一个 action 来改变这个组件的状态,</p>
+<p>比如 多语言,换肤,字体切换等功能,一个全局的状态量,能影响App中很多组件的状态,涉及到多个页面的交互,[一对多]</p>
+<p>又或者自定义Alert弹窗等情景,把弹窗组件写到页面管理器的层级,整个App中任意界面人意组件都能随时呼叫弹窗出现,[多对一]</p>
+<p>但是,在项目中实际使用了Redux之后,发现了很多情景并不适合使用redux管理数据,redux好用,但是不能滥用:</p>
+<p>在商品详情页面,我使用store来管理一个商品页面需要显示的全部state数据,但是,在点击商品详情页的推荐商品后,将push一个新的商品详情页,但是此时新的页面数据依然还是上一个页面的数据(因为一个页面使用一个store管理),此时又需要判断生命周期方法去更新数据,之后返回上一页时,由于store被新页面数据修改,老页面的数据被对应改变,又得重新去拉取数据.</p>
+<p>总结一下:</p>
+<p>某个页面的state与页面生命周期相同的话,最优的处理方式还是将数据绑定到页面上,</p>
+<p>所以,在实际使用中,个人更倾向不把redux当成一个管理所有state的方式,而是仅仅在特定的时候去使用redux作为一种特殊处理的解决方案</p>
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2020/02/10/22/">
+        JavaScript | 再读ES6文档
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2020-02-10 00:00:00" datetime="2020-02-09T16:00:00.000Z" itemprop="datePublished">
+  2020-02-10
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="再读ES6文档的相关笔记"><a href="#再读ES6文档的相关笔记" class="headerlink" title="再读ES6文档的相关笔记"></a>再读ES6文档的相关笔记</h2><p>ES6 (ECMAScript 6.0) 发布于2015年6月,泛指下一代JS语言标准，包含ES2015、ES2016、ES2017、ES2018、ES2019、ES2020</p>
+<ol>
+<li><p>let const 替代之前的var, const定义常量, let为js新增了<strong>块级作用域</strong>,</p>
+<p>ES6 申明变量的6种方法: var / function / let / const / import / class</p>
+<p>顶层对象 window / global , 在不同平台获取顶层对象通用 globalThis</p>
+</li>
+<li><p>模版字符串 “xx” + this.xx + “xx” 可替代为 ‘xx${this.xx}xx’</p>
+</li>
+<li><p>函数的拓展</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">1.可设置函数默认值 若调用方法没有传值,则使用设置的默认值</span><br><span class="line">	function animal (name, type = &#x27;cat&#x27;) &#123;&#125;</span><br><span class="line">2.rest参数,用于获取多余参数,将变量的多余参数防暑数组中,rest 参数之后不能再有其他参数</span><br><span class="line">	function add (...values) &#123; values // [2,5,3] &#125;</span><br><span class="line">	add(2,5,3)</span><br><span class="line">3.name属性</span><br><span class="line">	function foo() &#123;&#125;</span><br><span class="line">	foo.name // &#x27;foo&#x27;</span><br><span class="line">4.箭头函数,及箭头函数的this对象绑定</span><br><span class="line">5.尾递归 </span><br><span class="line">6.复制数组 let a =[1,2] let b = [...a]</span><br><span class="line">7.合并数组 [...arr1, ...arr2, ...arr3]</span><br><span class="line">8.拆分数组 [a, ...rest] = arr</span><br><span class="line">9.[...&#x27;hello&#x27;] // [&#x27;h&#x27;,&#x27;e&#x27;,&#x27;l&#x27;,&#x27;l&#x27;,&#x27;o&#x27;]</span><br><span class="line">10.类似数组对象转数组(含 set,Map)</span><br><span class="line">	let oj = &#123;&quot;0&quot;:&quot;a&quot;,&quot;1&quot;:&quot;b&quot;,&quot;2&quot;:&quot;c&quot;,length:3&#125;</span><br><span class="line">	var arr = Array.from(oj) // [&#x27;a&#x27;,&#x27;b&#x27;,&#x27;c&#x27;]</span><br><span class="line">	Array.from([1, 2, 3], (x) =&gt; x * x) // [1,4,9]</span><br><span class="line">11.copyWithin</span><br><span class="line">	[1, 2, 3, 4, 5].copyWithin(0, 3) // [4,5,3,4,5]</span><br><span class="line">12.find // findIndex</span><br><span class="line">	[1, 4, -5, 10].find((n, index, arr) =&gt; n &lt; 0) // -5 返回符合要求的第一个数值</span><br><span class="line">	[1, 4, -5, 10].findIndex((n, index, arr) =&gt; n &lt; 0) // 2 返回符合要求的第一个数值的数组编号</span><br><span class="line">13.填充数组 fill  </span><br><span class="line">	new Arry(3).fill(7) =&gt; [7,7,7] // 填充全部</span><br><span class="line">	[&#x27;a&#x27;,&#x27;b&#x27;,&#x27;c&#x27;].fill(7,1,2) =&gt; [&#x27;a&#x27;,7,&#x27;c&#x27;] // 填充指定区间</span><br><span class="line">14.entries()，keys() 和 values()	</span><br><span class="line">	keys() 键名 values() 键值 entries() 键值对</span><br><span class="line">15.includes() | indexOf()</span><br><span class="line">16. flat() | flatMap()</span><br><span class="line">	[1,2,[3,4]].flat() // [1,2,3,4]</span><br><span class="line">	flat只拉平一层 [1,2,[3,[4,5]]].flat() // [1,2,3,[4,5]]</span><br><span class="line">	要全部拉平则需要 [1,2,[3,[4,5]]].flat(Infinity) // [1,2,3,4,5]</span><br><span class="line">	flatMap() 方法对原数组的每个成员执行一个函数</span><br><span class="line">	[2,3,4].flatMap((x)=&gt; [x,x*2]) // [2,4,3,6,4,8]</span><br></pre></td></tr></table></figure></li>
+<li><p>对象的新增方法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1.assign 同于对象的合并</span><br><span class="line">	const target = &#123;a:1&#125;</span><br><span class="line">	const source = &#123;b:2&#125;</span><br><span class="line">	const source = &#123;c:3&#125;</span><br><span class="line">	Object.assign(target,source1,source2)</span><br><span class="line">	target // &#123;a:1,b:1,c:3&#125;</span><br><span class="line">	目标对象于源对象有同名属性,后面的属性会覆盖前面的属性</span><br><span class="line">	浅拷贝 :</span><br><span class="line">	const obj1 = &#123;a:&#123;b:1&#125;&#125;</span><br><span class="line">	const obj2 = Object.assign(&#123;&#125;,obj1)</span><br><span class="line">	处理数组: Object.assign([1,2,3],[4,5])  // [4,5,3]</span><br><span class="line">2.</span><br></pre></td></tr></table></figure></li>
+<li><p>扩展运算符</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let a = [1,2,3]</span><br><span class="line">console.log(a) // [1,2,3]</span><br><span class="line">console.log(...a) // 1 2 3</span><br><span class="line">let b = &#123;a: 1, b: 2&#125;</span><br><span class="line">console.log(&#123;c:3, ... b&#125;) // &#123;a: 1,b: 2,c: 3&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>apply 和 call</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">都是对象本身没有某个属性或者方法,去引用其他对象的属性或方法</span><br><span class="line">apply this指向是 参数数组</span><br><span class="line">call this的指向是 参数1,参数2,参数3</span><br><span class="line">eg:</span><br><span class="line">obj.work.apply(window,[x1,x2,x3])</span><br><span class="line">obj.work.call(window,x1,x2,x3)</span><br></pre></td></tr></table></figure></li>
+<li><p>表达式解构 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let cat = &#x27;ken&#x27;</span><br><span class="line">let dog = &#x27;lili&#x27;</span><br><span class="line">let zoo = &#123;cat: cat, dog: dog&#125;</span><br><span class="line">可直接写成</span><br><span class="line">let zoo = &#123;cat, dog&#125;</span><br><span class="line">反过来可这么用</span><br><span class="line">let &#123;cat, dog&#125; = zoo</span><br></pre></td></tr></table></figure></li>
+<li><p>新增数据类型 Set(集) 和 WeakSet(弱集)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Set 中不能包含相同元素</span><br><span class="line">WeakSet 使用对元素有严格要求,必须是Object,所以在使用的时候要使用</span><br><span class="line">let wk = new WeakSet()</span><br><span class="line">let foo = new String(&quot;bar&quot;)</span><br><span class="line">let pi = new Number(&quot;3.14&quot;)</span><br><span class="line">只能add这样的对象</span><br><span class="line">wk.add(foo)</span><br><span class="line">wk.add(pi)</span><br><span class="line">wk.has(foo) // =&gt; true</span><br><span class="line">如果元素的引用已被全部解除，则该元素就会被删除</span><br><span class="line">foo = null</span><br><span class="line">wk.has(foo)</span><br><span class="line">wk.delete(pi)</span><br><span class="line">wk.clear()</span><br><span class="line">.keys() .values() .entries()</span><br><span class="line">使用Set来进行数组去重 let arr1 = [...new Set(arr)]</span><br></pre></td></tr></table></figure></li>
+<li><p>新增数据类型Map和weakMap</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">以 key/Value 的键值对结构,相比Object对象来说,key 必须是字符串或者数组,Map不存在这个限制,可以使用任意对象作为key</span><br><span class="line">set / has / get </span><br><span class="line">WeakMap 和 WeakSet 很类似，只不过 WeakMap 的键和值都会检查变量引用，只要其一的引用全被解除，该键值对就会被删除。</span><br><span class="line">.size 返回Map结构的成员总数</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>以语法糖来定义类</p>
+</li>
+</ol>
+   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class xx &#123;</span><br><span class="line">  	constructor (x,y,z) &#123;</span><br><span class="line">      this.x = x</span><br><span class="line">      this.y = y</span><br><span class="line">      this.z = z</span><br><span class="line">  	&#125;</span><br><span class="line">  	</span><br><span class="line">  	doWrok() &#123;</span><br><span class="line">      ...</span><br><span class="line">  	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="11">
+<li><p>继承</p>
+</li>
+<li><pre><code>class yy extens xx &#123;
+      constructor(x1, y1, z1) &#123;
+          super(x1,y1,z1)
+      &#125;
+&#125;
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">13. ES6的类机制依然存在问题</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+1.不支持私有属性
+2.不支持前置属性定义,但是可用get和set实现
+3.不支持多重继承
+3.没有类似协议或者接口等概念
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">14. 生成器(Generator)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+function *work() &#123;&#125;
+可以看作为与JavaScript主线程分离运行时,可以随时被yield切回主线程(生成器不影响主线程)
+每一次生成器运行时都能被yield带出一个值,使其回到主线程中
+eg:
+function* fibo() &#123;
+  let [a, b] = [1, 1]
+  yield a
+  yield b
+  while (true) &#123;
+    [a, b] = [b, a + b]
+    yield b
+  &#125;
+&#125;
+let gen = fibo()
+let arr = []
+for (let i = 0; i &lt; 10; i++) &#123;
+  arr.push(gen.next().value)
+&#125;
+console.log(arr) //=&gt; [ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ]
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">15. 模块化</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+1.每个模块只加载一次,每个JS只执行一次,如果下次再去加载同目录下的文件,直接从内存中读取,一个模块就是一个单例
+2.每个模块内申明的变量都是局部变量,不回污染全局作用域
+3.模块内部的变量可以通过export导出
+4.一个模块可以导入别的模块
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">16. Promise</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+用于解决函数无限嵌套的工具之一
+function dowork() &#123;
+      return new Promise((resolve, reject) =&gt; &#123;
+          if (xx) &#123;
+          resolve(value)
+          &#125; else &#123;
+          reject(err)
+          &#125;
+      &#125;)
+&#125;
+promise对象的三种状态 pending(进行中),fulfilled(已成功),rejected(已失败)
+API: 
+Promise.resolve()
+Promise.reject()
+Promise.prototype.then()
+Promise.prototype.catch()
+Promise.all() // 所有的完成
+Promise.rece() // 竞速,完成一个即可
+Promise.then()
+Promise.finally()
+
+somePromise().then(()=&gt;&#123;&#125;).catch(()=&gt;&#123;&#125;)
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">17. 头部补全,尾部补全</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+&#39;x&#39;.padStart(5,&#39;ab&#39;) // &#39;ababx&#39;
+&#39;x&#39;.padEnd(5,&#39;ab&#39;) // &#39;xabab&#39;
+&#39;x&#39;.padStart(4) // &#39;    x&#39; 此时用空格补全
+&#39;12&#39;.padStart(10,&#39;YYYY-MM-DD&#39;) // &quot;YYYY-MM-12&quot;
+&#39;09-12&#39;.padStart(10,&#39;YYYY-MM-DD&#39;) // &quot;YYYY-09-12&quot;
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">18. 数值的拓展</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+二进制新写法,前缀0b  eg: 0b111110111 === 503
+Number(&#39;0b111&#39;) // 7
+Number.isFinite()  // 是否有限
+Number.isNaN() // 是否为NaN
+Number.parseInt()
+Number.parseFloat()
+Number.isInteger() // 判断一个数是否为整数
+Number.EPSILON // js能表示的最小精度
+Number.isSafeInteger() // 是否在-2^53到2^53之间（不含两个端点）
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">19. Math的拓展</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+Math.trunc() 去掉一个数的小数部分,返回整数部分
+Math.sign() 判断一个数是正数(返回+1),负数(返回-1)还是0(返回0)
+Math.cbrt() 计算一个数的立方根
+Math.hypot(3,4) // 5 返回所有的参数的平方和的平方根
+Math.log10(100) // 2 返回以10为底数的x的对数
+Math.log2(4) // 2 返回以2为底数的x的对数
+指数运算符
+2 ** 2 = 4
+2 ** 3 = 8
+2 ** 3 ** 2 =&gt; 2 ** (3 ** 2) 特点之一是右结合,多个指数运算符连用从最右边的开始计算
+a **= 2 =&gt; a = a ** 2
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">20. 额外</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+async await 是ES7 
+String.raw() 方法
+String.raw(&#123; raw: &#39;test&#39; &#125;, 0, 1, 2); // &#39;t0e1s2t&#39;
+</code></pre>
+</li>
+<li></li>
+</ol>
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2019/05/05/19/">
+        macOS | 即刻黄历
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2019-05-05 00:00:00" datetime="2019-05-04T16:00:00.000Z" itemprop="datePublished">
+  2019-05-05
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="jikeCalendar-in-macOS"><a href="#jikeCalendar-in-macOS" class="headerlink" title="jikeCalendar in macOS"></a>jikeCalendar in macOS</h3><p><a target="_blank" rel="noopener" href="https://github.com/Dawninest/jikeCalendar-macOS">GitHub地址</a></p>
+<p>最近迷上了一款App叫”即刻”,被其开发的社区和对三方开发的支持所吸引</p>
+<p>于是抓包数据解析接口,做了一款macOS的即刻黄历应用</p>
+<p>这次不光做了dock栏工具,还做了saver锁屏壁纸</p>
+<p>也收获了目前自己GitHub个人项目的最高star</p>
+<p>记录了开发过程中的一些 <a target="_blank" rel="noopener" href="https://github.com/Dawninest/jikeCalendar-macOS/blob/master/devHis.md">碎碎念</a></p>
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2019/03/08/18/">
+        macOS | B站追番dock工具
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2019-03-08 00:00:00" datetime="2019-03-07T16:00:00.000Z" itemprop="datePublished">
+  2019-03-08
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="BiliBili-追番macOS-dock栏工具"><a href="#BiliBili-追番macOS-dock栏工具" class="headerlink" title="BiliBili 追番macOS dock栏工具"></a>BiliBili 追番macOS dock栏工具</h3><p><a target="_blank" rel="noopener" href="https://github.com/Dawninest/b2k-macos">GitHub地址</a></p>
+<p>使用Swift4.2开发</p>
+<p>个人第一款macOS应用尝试,</p>
+<p>大约总结一下我能体验到的macOS与iOS的差别:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.UI组件多为NSxx,“NS”开头</span><br><span class="line">2.没有iOS的UI组件库那么多东西,但是组件使用方式及命名习惯与iOS相似</span><br><span class="line">3.UI定位的原点在左下角(iOS在左上角)</span><br><span class="line">4.没有TabView那么高级的组件,写列表的真是煎熬</span><br></pre></td></tr></table></figure>
+
+
+    
+  </div>
+</article>
+  
+
+  <div class="content-pagination">
+    
+    
+    <div class="next">
+      <a href="/page/2/">
+        <span>下一页</span>
+      </a>
+      <i class="next-icon"></i>
+    </div>
+    
+
+  </div>
+</div>
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Dawninest's Blob website.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  </span>
+
+    </footer>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/index.js"></script>
+
+  
+  </div>
+</body>

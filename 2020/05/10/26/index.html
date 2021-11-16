@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dark Force">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Dawninest</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+        GitHub</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2020/05/10/26/">
+        React Native | Redux
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2020-05-10 00:00:00" datetime="2020-05-09T16:00:00.000Z" itemprop="datePublished">
+  2020-05-10
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactNative/" rel="tag">ReactNative</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h2><h3 id="1-目标"><a href="#1-目标" class="headerlink" title="1.目标"></a>1.目标</h3><p>目标是创建一个状态管理库，来提供最简化 API，但同时做到行为的完全可预测，因此才得以实现日志打印，热加载，时间旅行，同构应用，录制和重放，而不需要任何开发参与。</p>
+<h3 id="2-核心概念"><a href="#2-核心概念" class="headerlink" title="2.核心概念"></a>2.核心概念</h3><p>Store: 当使用普通对象来描述应用的 state 时,对象就像 “Model”,区别是它并没有 setter(修改器方法),因此其它的代码不能随意修改它,要想更新 state 中的数据，</p>
+<p>Action: 你需要发起一个 action,Action 就是一个普通 JavaScript 对象,用来描述发生了什么,强制使用 action 来描述所有变化带来的好处是可以清晰地知道应用中到底发生了什么,</p>
+<p>reducer: 最终,为了把 action 和 state 串起来,开发一些函数,这就是 reducer,reducer 只是一个接收 state 和 action,并返回新的 state 的函数</p>
+<h3 id="3-三大原则"><a href="#3-三大原则" class="headerlink" title="3.三大原则"></a>3.三大原则</h3><h4 id="单一数据源"><a href="#单一数据源" class="headerlink" title="单一数据源"></a>单一数据源</h4><p>整个应用的 state 被储存在一棵 object tree 中，并且这个 object tree 只存在于唯一一个 store 中,</p>
+<p>这让同构应用开发变得非常容易。来自服务端的 state 可以在无需编写更多代码的情况下被序列化并注入到客户端中。由于是单一的 state tree ，调试也变得非常容易。在开发中，你可以把应用的 state 保存在本地，从而加快开发速度。此外，受益于单一的 state tree ，以前难以实现的如“撤销/重做”这类功能也变得轻而易举。</p>
+<h4 id="State是只读的"><a href="#State是只读的" class="headerlink" title="State是只读的"></a>State是只读的</h4><p>唯一改变 state 的方法就是触发 action，action 是一个用于描述已发生事件的普通对象。</p>
+<p>这样确保了视图和网络请求都不能直接修改 state，相反它们只能表达想要修改的意图。因为所有的修改都被集中化处理，且严格按照一个接一个的顺序执行，因此不用担心 race condition 的出现。 Action 就是普通对象而已，因此它们可以被日志打印、序列化、储存、后期调试或测试时回放出来。</p>
+<h4 id="使用纯函数来执行修改"><a href="#使用纯函数来执行修改" class="headerlink" title="使用纯函数来执行修改"></a>使用纯函数来执行修改</h4><p>为了描述 action 如何改变 state tree ，你需要编写 reducers</p>
+<p>Reducer 只是一些纯函数，它接收先前的 state 和 action，并返回新的 state。刚开始你可以只有一个 reducer，随着应用变大，你可以把它拆成多个小的 reducers，分别独立地操作 state tree 的不同部分，因为 reducer 只是函数，你可以控制它们被调用的顺序，传入附加数据，甚至编写可复用的 reducer 来处理一些通用任务</p>
+<h3 id="4-数据流"><a href="#4-数据流" class="headerlink" title="4.数据流"></a>4.数据流</h3><p><strong>严格的单向数据流</strong>是 Redux 架构的设计核心。</p>
+<p>这意味着应用中所有的数据都遵循相同的生命周期，这样可以让应用变得更加可预测且容易理解。同时也鼓励做数据范式化，这样可以避免使用多个且独立的无法相互引用的重复数据。</p>
+<hr>
+<h2 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h2><p>redux是在最父级对象外包裹一层,并以最外层的state作为全局的变量用于状态管理,即Store,界面拿到这个store中的某个参数值作为可操作变量去确定界面的状态,当需要界面状态变化时,通过dispatch一个action来改变store中的指定状态,来达到更新对应界面的依赖状态值从而变更界面.</p>
+<p>意味着,如果一个组件的某个状态量被自全局store管理,可以在整个App任意地方去dispatch一个 action 来改变这个组件的状态,</p>
+<p>比如 多语言,换肤,字体切换等功能,一个全局的状态量,能影响App中很多组件的状态,涉及到多个页面的交互,[一对多]</p>
+<p>又或者自定义Alert弹窗等情景,把弹窗组件写到页面管理器的层级,整个App中任意界面人意组件都能随时呼叫弹窗出现,[多对一]</p>
+<p>但是,在项目中实际使用了Redux之后,发现了很多情景并不适合使用redux管理数据,redux好用,但是不能滥用:</p>
+<p>在商品详情页面,我使用store来管理一个商品页面需要显示的全部state数据,但是,在点击商品详情页的推荐商品后,将push一个新的商品详情页,但是此时新的页面数据依然还是上一个页面的数据(因为一个页面使用一个store管理),此时又需要判断生命周期方法去更新数据,之后返回上一页时,由于store被新页面数据修改,老页面的数据被对应改变,又得重新去拉取数据.</p>
+<p>总结一下:</p>
+<p>某个页面的state与页面生命周期相同的话,最优的处理方式还是将数据绑定到页面上,</p>
+<p>所以,在实际使用中,个人更倾向不把redux当成一个管理所有state的方式,而是仅仅在特定的时候去使用redux作为一种特殊处理的解决方案</p>
+
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Redux"><span class="post-toc-number">1.</span> <span class="post-toc-text">Redux</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E7%9B%AE%E6%A0%87"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.目标</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2.核心概念</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E4%B8%89%E5%A4%A7%E5%8E%9F%E5%88%99"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3.三大原则</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%8D%95%E4%B8%80%E6%95%B0%E6%8D%AE%E6%BA%90"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">单一数据源</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#State%E6%98%AF%E5%8F%AA%E8%AF%BB%E7%9A%84"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">State是只读的</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BD%BF%E7%94%A8%E7%BA%AF%E5%87%BD%E6%95%B0%E6%9D%A5%E6%89%A7%E8%A1%8C%E4%BF%AE%E6%94%B9"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">使用纯函数来执行修改</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">4.数据流</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%AA%E4%BA%BA%E7%90%86%E8%A7%A3"><span class="post-toc-number">2.</span> <span class="post-toc-text">个人理解</span></a></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Dawninest's Blob website.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  </span>
+
+    </footer>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/index.js"></script>
+
+  
+  </div>
+</body>

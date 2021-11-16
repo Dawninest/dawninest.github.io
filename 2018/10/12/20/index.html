@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dark Force">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Dawninest</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+        GitHub</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2018/10/12/20/">
+        Android | 学习总结
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2018-10-12 00:00:00" datetime="2018-10-11T16:00:00.000Z" itemprop="datePublished">
+  2018-10-12
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/" rel="tag">Android</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="Android学习总结"><a href="#Android学习总结" class="headerlink" title="Android学习总结"></a>Android学习总结</h3><p>最近开发ReactNative项目的时候,或多或少接触了很多Android原生的东西,</p>
+<p>虽说能看懂Java代码而且有Google的帮助下能解决几乎所有问题,</p>
+<p>但是本着技多不压身的原则,找了个Android入门视频大约了解了一下,</p>
+<p>花了接近一个月的闲暇时间看完了整个教程,这里不细致展示每个模块的笔记了,</p>
+<p>毕竟开发多年,深知有些东西,在不用的时候没必要过深的了解,只需要知道:</p>
+<p>“有这个东西,我可能会用到来解决问题”</p>
+<p>然后在用的时候再学就是了,这点学习能力还是有的,</p>
+<p>总纲如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line">—————————————————————————</span><br><span class="line"></span><br><span class="line">| —  界面基础</span><br><span class="line">	| —  View及ViewGroup</span><br><span class="line">	| —  自定义View</span><br><span class="line">	| —  相对布局管理器 RelativeLayout</span><br><span class="line">	| —  线性布局管理器 LinearLayout</span><br><span class="line">	| —  帧布局管理器	 FrameLayout</span><br><span class="line">	| —  表格布局管理器 TableLayout</span><br><span class="line">	| —  网格布局管理器 GridLayout</span><br><span class="line">	| —  布局管理器的嵌套</span><br><span class="line">| —  基本UI组件</span><br><span class="line">	| —  文本框组件 TextView</span><br><span class="line">	| —  编辑框组件 EditView</span><br><span class="line">	| —  普通按钮 Button</span><br><span class="line">	| —  图片按钮 ImageButton</span><br><span class="line">	| —  单选按钮(组) RadioButton / RadioGroup</span><br><span class="line">	| —  复选框 checkBox</span><br><span class="line">	| —  日期选择器 DatePicker</span><br><span class="line">	| —  时间选择器 TimePicker</span><br><span class="line">	| —  计时器 Chronometer</span><br><span class="line">| —  高级UI组件</span><br><span class="line">	| —  进度条 progressBar</span><br><span class="line">	| —  拖动条 seekBar</span><br><span class="line">	| —  星级评分 ratingBar</span><br><span class="line">	| —  图像 ImageView</span><br><span class="line">	| —  图像切换器 ImageSwitcher</span><br><span class="line">	| —  网格视图 GridView</span><br><span class="line">	| —  下拉列表 Spinner</span><br><span class="line">	| —  列表视图 ListView</span><br><span class="line">	| —  滚动视图 ScrollView / HorizontalScrollView</span><br><span class="line">	| —  选项卡 TabHost</span><br><span class="line">| —  基本程序单元 Activity</span><br><span class="line">	| —  Activity 之间跳转(Intent)</span><br><span class="line">	| —  使用Bundle在Activity之间交换数据</span><br><span class="line">	| —  调用另一个Activity并返回结果</span><br><span class="line">	| —  Fragment (实现微信界面tab标签切换)</span><br><span class="line">| —  Intent</span><br><span class="line">	| —  Intent</span><br><span class="line">	| —  Action+Data</span><br><span class="line">	| —  Action+Category</span><br><span class="line">	| —  Extras和Flags</span><br><span class="line">	| —  Intent种类</span><br><span class="line">	| —  Intent过滤器</span><br><span class="line">| —  Android事件处理和手势</span><br><span class="line">	| —  监听的事件处理</span><br><span class="line">	| —  回调的事件处理</span><br><span class="line">	| —  物理按键事件处理</span><br><span class="line">	| —  单击事件 setOnClickListener</span><br><span class="line">	| —  长按事件 setOnLongClickListener</span><br><span class="line">	| —  触摸事件 GestureDetector : onTouchEvent </span><br><span class="line">	| —  手势事件</span><br><span class="line">| —  Android应用资源</span><br><span class="line">	| —  字符串资源 strings.xml</span><br><span class="line">	| —  颜色资源 colors.xml</span><br><span class="line">	| —  尺寸资源 dimens.xml</span><br><span class="line">	| —  布局资源</span><br><span class="line">	| —  数组资源</span><br><span class="line">	| —  Drawable资源 (图片,StateListDrawable)</span><br><span class="line">	| —  mipmap资源 </span><br><span class="line">	| —  主题资源</span><br><span class="line">	| —  样式资源</span><br><span class="line">	| —  选项菜单 </span><br><span class="line">	| —  上下文菜单</span><br><span class="line">	| —  国际化</span><br><span class="line">| —  Action Bar</span><br><span class="line">	| —  Action Bar</span><br><span class="line">	| —  Action Item </span><br><span class="line">	| —  Action View</span><br><span class="line">	| —  ActionBar和Tab</span><br><span class="line">	| —  层级式导航</span><br><span class="line">| —  消息,通知和广播</span><br><span class="line">	| —  Toast</span><br><span class="line">	| —  AlertDialog</span><br><span class="line">	| —  Notification</span><br><span class="line">	| —  BroadcastReceiver</span><br><span class="line">	| —  AlarmManager 设置闹钟</span><br><span class="line">| —  图形图像处理技术</span><br><span class="line">	| —  画笔和画布 Paint / Canvas</span><br><span class="line">	| —  逐帧动画</span><br><span class="line">	| —  补间动画</span><br><span class="line">| —  多媒体相关开发</span><br><span class="line">	| —  音频[MediaPlay</span><br><span class="line">	| —  音频[SoundPool</span><br><span class="line">	| —  视频[VideoView</span><br><span class="line">	| —  视频[MediaPlay+SurfaceView</span><br><span class="line">	| —  摄像头的拍照和录制</span><br><span class="line">| —  数据存储</span><br><span class="line">	| —  Shared Preferences存储</span><br><span class="line">	| —  内部存储</span><br><span class="line">	| —  外部存储</span><br><span class="line">	| —  数据库 SQLite</span><br><span class="line">	| —  Content Provider</span><br><span class="line">| —  Handler消息处理</span><br><span class="line">	| —  Handler消息传递</span><br><span class="line">	| —  Message</span><br><span class="line">	| —  Looper</span><br><span class="line">| —  Service应用</span><br><span class="line">	| —  Service</span><br><span class="line">	| —  Bound Service</span><br><span class="line">	| —  IntentService</span><br><span class="line"></span><br><span class="line">—————————————————————————</span><br></pre></td></tr></table></figure>
+
+
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Android%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93"><span class="post-toc-number">1.</span> <span class="post-toc-text">Android学习总结</span></a></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Dawninest's Blob website.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  </span>
+
+    </footer>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/index.js"></script>
+
+  
+  </div>
+</body>

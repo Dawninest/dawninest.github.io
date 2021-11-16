@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dark Force">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Dawninest</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+        GitHub</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2016/02/21/02/">
+        Objective-C | 内存管理
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2016-02-21 00:00:00" datetime="2016-02-20T16:00:00.000Z" itemprop="datePublished">
+  2016-02-21
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h2><h3 id="内存管理的原理："><a href="#内存管理的原理：" class="headerlink" title="内存管理的原理："></a>内存管理的原理：</h3><p>​    保证每个对象在使用时存在内存中，不用的对象最后从内存中清除一个对象的生命周期        </p>
+<p>​    对象初始化  -&gt; 执行，使用 -&gt; 释放内存管理只针对继承NSObject的对象，对C数据类型无效 </p>
+<h3 id="retainCount引用计数"><a href="#retainCount引用计数" class="headerlink" title="retainCount引用计数"></a><strong>retainCount</strong>引用计数</h3><ol>
+<li>每个OC对象都有自己的引用计数器，retainCount    </li>
+<li>当对象被创建时，引用计数置为1    </li>
+<li>retain使对象引用计数加1，并获得对象的所有权    </li>
+<li>release使对象引用计数减1，并放弃对象的所有权    </li>
+<li>当引用计数为0时，对象将被系统销毁     </li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">retainCount:获取对象当前的引用计数	</span><br><span class="line">alloc:返回一个对象，并将其引用计数设置为1，类方法	</span><br><span class="line">retain;将对象的引用计数加1	</span><br><span class="line">release:对象的引用计数减1	</span><br><span class="line">autoreplease:将对象加入自动释放池，对象引用计数滞后减1	</span><br><span class="line">dealloc，不主动调用，需要在类中重写 	</span><br></pre></td></tr></table></figure>
+
+<p>在非ARC模式下，进行内存管理    </p>
+<ul>
+<li>内存管理仅仅使用于对象类型，数据类型无需进行内存管理        </li>
+<li>使用alloc,new,copy,mutableCopy生成的对象，对象初始引用计数值为1，手动释放内存(堆)    </li>
+<li>使用便利初始化生成的对象，对象初始引用计数值为1，并且已经设置为自动释放(栈)    </li>
+<li>使用retain持有的对象，需要保证retain和release次数相等 </li>
+</ul>
+<h3 id="setter-getter内存管理"><a href="#setter-getter内存管理" class="headerlink" title="setter,getter内存管理"></a><strong>setter</strong>,<strong>getter</strong>内存管理</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- (void)setName:(NSString *)name	&#123;</span><br><span class="line">	if(name != name)&#123;</span><br><span class="line">  	[name release];		//释放旧对象，持有新对象			 </span><br><span class="line">  	_name = [name retain];		</span><br><span class="line">  &#125;</span><br><span class="line">&#125; 	</span><br><span class="line">- (NSString *)name	&#123;</span><br><span class="line">	retain _name;	</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义初始化"><a href="#自定义初始化" class="headerlink" title="自定义初始化"></a>自定义初始化</h3><p>自定义初始化方法中：    </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(self)&#123;</span><br><span class="line">	_name = [name retain];	</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<h3 id="集合内存管理：字典，数组"><a href="#集合内存管理：字典，数组" class="headerlink" title="集合内存管理：字典，数组"></a>集合内存管理：字典，数组</h3><ol>
+<li>对象加入集合对象时，＋1    </li>
+<li>对象从集合对象中移除，—1    </li>
+<li>集合对象的retainCount改变，其中元素的retainCount不变    </li>
+<li>集合对象销毁时，其中所有元素release一次 </li>
+</ol>
+<h3 id="自动释放池NSAutoreleasePool"><a href="#自动释放池NSAutoreleasePool" class="headerlink" title="自动释放池NSAutoreleasePool"></a>自动释放池<strong>NSAutoreleasePool</strong></h3><ul>
+<li>类似于一个容器，所有加入容器中的对象都可以被其管理，容器销毁时，池将会释放(release)所有对象    </li>
+<li>一个对象可以被多次autorelease    </li>
+<li>便利初始化的对象默认已经加入当前池中     </li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSAutoreleasePool *pool = [[NSAutoreleasePool alloc]init];</span><br></pre></td></tr></table></figure>
+
+
+
+
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="post-toc-number">1.</span> <span class="post-toc-text">内存管理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%9A%84%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">内存管理的原理：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#retainCount%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">retainCount引用计数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#setter-getter%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">setter,getter内存管理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">自定义初始化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%9B%86%E5%90%88%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%EF%BC%9A%E5%AD%97%E5%85%B8%EF%BC%8C%E6%95%B0%E7%BB%84"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">集合内存管理：字典，数组</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%87%AA%E5%8A%A8%E9%87%8A%E6%94%BE%E6%B1%A0NSAutoreleasePool"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">自动释放池NSAutoreleasePool</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Dawninest's Blob website.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  </span>
+
+    </footer>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/index.js"></script>
+
+  
+  </div>
+</body>

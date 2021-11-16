@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dark Force">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Dawninest</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+        GitHub</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2020/07/08/23/">
+        React Native | Hooks
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2020-07-08 00:00:00" datetime="2020-07-07T16:00:00.000Z" itemprop="datePublished">
+  2020-07-08
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactNative/" rel="tag">ReactNative</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="Hooks及其他解决方案"><a href="#Hooks及其他解决方案" class="headerlink" title="Hooks及其他解决方案"></a>Hooks及其他解决方案</h2><p><strong>HOC高阶组件</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">双向绑定</span><br><span class="line">不要在render方法内创建高阶组件</span><br><span class="line">React Diff 算法的原则是：</span><br><span class="line">	使用组件表示标识符确定是渲染还是更新组件</span><br><span class="line">	如果组件的和前一次渲染时标识是相同的，递归更新子组件</span><br><span class="line">	如果标识不同卸载组件重新挂载新组件</span><br><span class="line"></span><br><span class="line">高阶组件就是一个没有副作用的纯函数，各个高阶组件不会相互依赖耦合</span><br><span class="line">所以使用高阶组件时不要改变原始组件</span><br><span class="line">高阶组件并不关心数据使用的方式和原因，而被包裹的组件也不关心数据来自何处。高阶组件的增加不会为原组件增加负担</span><br><span class="line"></span><br><span class="line">HOC缺陷：</span><br><span class="line">需要在原组件上进行包裹或者嵌套，如果大量使用HOC，将会产生非常多的嵌套，这让调试变得非常困难。</span><br><span class="line">可以劫持props，在不遵守约定的情况下也可能造成冲突</span><br></pre></td></tr></table></figure>
+
+<p><strong>Redux</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">要想更新 state 中的数据，你需要发起一个 action。action 就是一个普通 JavaScript 对象</span><br><span class="line">强制使用 action 来描述所有变化带来的好处是可以清晰地知道应用中到底发生了什么,action 就像是描述发生了什么的指示器,为了把 action 和 state 串起来，开发一些函数，这就是 reducer,reducer 只是一个接收 state 和 action，并返回新的 state 的函数,</span><br><span class="line"></span><br><span class="line">单向数据流</span><br><span class="line">当我们有多个组件需要共享和使用相同state时，可能会变得很复杂，尤其是当这些组件位于应用程序的不同部分时, 有时这可以通过 提升state 到父组件来解决，但这并不总是有效，解决这个问题的一种方法是从组件中提取共享 state，并将其放入组件树之外的一个集中位置。这样，我们的组件树就变成了一个大“view”，任何组件都可以访问 state 或触发 action，无论它们在树中的哪个位置，通过定义和分离 state 管理中涉及的概念并强制执行维护 view 和 state 之间独立性的规则，代码变得更结构化和易于维护，</span><br><span class="line">这就是 Redux 背后的基本思想：</span><br><span class="line">应用中使用集中式的全局状态来管理，并明确更新状态的模式，以便让代码具有可预测性</span><br><span class="line"></span><br><span class="line">Redux 期望所有状态更新都是使用不可变的方式</span><br><span class="line"></span><br><span class="line">action 是一个具有 type 字段的普通 JavaScript 对象。可以将 action 视为描述应用程序中发生了什么的事件</span><br><span class="line"></span><br><span class="line">type 字段是一个字符串，给这个 action 一个描述性的名字，比如&quot;todos/todoAdded&quot;。我们通常把那个类型的字符串写成“域/事件名称”，其中第一部分是这个 action 所属的特征或类别，第二部分是发生的具体事情，action 对象可以有其他字段，其中包含有关发生的事情的附加信息。按照惯例，我们将该信息放在名为 payload 的字段中</span><br><span class="line"></span><br><span class="line">action creator 是一个创建并返回一个 action 对象的函数。它的作用是让你不必每次都手动编写 action 对象</span><br><span class="line"></span><br><span class="line">reducer 是一个函数，接收当前的 state 和一个 action 对象，必要时决定如何更新状态，并返回新状态。函数签名是：(state, action) =&gt; newState。 你可以将 reducer 视为一个事件监听器，它根据接收到的 action（事件）类型处理事件</span><br><span class="line">Reducer 必需符合以下规则：	</span><br><span class="line">1.仅使用 state 和 action 参数计算新的状态值</span><br><span class="line">2.禁止直接修改 state。必须通过复制现有的 state 并对复制的值进行更改的方式来做 不可变更新</span><br><span class="line">3.禁止任何异步逻辑、依赖随机值或导致其他“副作用”的代码</span><br><span class="line"></span><br><span class="line">Store</span><br><span class="line">当前 Redux 应用的状态存在于一个名为 store 的对象中</span><br><span class="line">store 是通过传入一个 reducer 来创建的，并且有一个名为 getState 的方法，它返回当前状态值</span><br><span class="line"></span><br><span class="line">Dispatch</span><br><span class="line">Redux store 有一个方法叫 dispatch。更新 state 的唯一方法是调用 store.dispatch() 并传入一个 action 对象。 store 将执行所有 reducer 函数并计算出更新后的 state，调用 getState() 可以获取新 state</span><br><span class="line">dispatch 一个 action 可以形象的理解为 &quot;触发一个事件&quot;。发生了一些事情，我们希望 store 知道这件事。 Reducer 就像事件监听器一样，当它们收到关注的 action 后，它就会更新 state 作为响应</span><br><span class="line"></span><br><span class="line">Selector 函数可以从 store 状态树中提取指定的片段。随着应用变得越来越大，会遇到应用程序的不同部分需要读取相同的数据，selector 可以避免重复这样的读取逻辑</span><br><span class="line"></span><br><span class="line">Redux (单向)数据流</span><br><span class="line">初始启动: 使用最顶层的 root reducer 函数创建 Redux store,	store 调用一次 root reducer，并将返回值保存为它的初始 state, 当 UI 首次渲染时，UI 组件访问 Redux store 的当前 state，并使用该数据来决定要呈现的内容。同时监听 store 的更新，以便他们可以知道 state 是否已更改</span><br><span class="line">更新环节:  应用程序中发生了某些事情，例如用户单击按钮, 然后dispatch 一个 action 到 Redux store,store 用之前的 state 和当前的 action 再次运行 reducer 函数，并将返回值保存为新的 state,store 通知所有订阅过的 UI，通知它们 store 发生更新,每个订阅过 store 数据的 UI 组件都会检查它们需要的 state 部分是否被更新,	发现数据被更新的每个组件都强制使用新数据重新渲染，紧接着更新网页</span><br><span class="line"></span><br><span class="line">用 Thunk 编写异步逻辑</span><br><span class="line">thunk 是一种特定类型的 Redux 函数，可以包含异步逻辑。Thunk 是使用两个函数编写的</span><br><span class="line">一个内部 thunk 函数，它以 dispatch 和 getState 作为参数,	外部创建者函数，它创建并返回 thunk 函数</span><br><span class="line"></span><br><span class="line">Actions 是用来描述在 app 中发生了什么的普通对象，并且是描述突变数据意图的唯一途径。很重要的一点是 不得不 dispatch 的 action 对象并非是一个样板代码，而是 Redux 的一个 基本设计原则</span><br><span class="line"></span><br><span class="line">三大原则</span><br><span class="line">1.单一数据源 </span><br><span class="line">2.State只读 </span><br><span class="line">3.使用纯函数来执行修改</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>MobX</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">通过透明的函数响应式编程使得状态管理变得简单和可扩展</span><br><span class="line">背后的哲学很简单: 任何源自应用状态的东西都应该自动地获得。其中包括UI、数据序列化、服务器通讯</span><br><span class="line"></span><br><span class="line">@observable</span><br><span class="line">@computed</span><br><span class="line">@observer</span><br><span class="line">@action</span><br><span class="line"></span><br><span class="line">MobX 使用原生 javascript 。由于它的侵入性不强，它可以和绝大部分 javascript 库共同使用，而不需要特定的 MobX 风格库</span><br><span class="line">MobX 不是一个框架。它不会告诉你如何去组织你的代码，在哪存储状态或者如何处理事件。然而，它可能将你从以性能的名义对你的代码提出各种限制的框架中解放出来</span><br><span class="line">MobX 是框架无关的，可以应用在任何现代JS环境中。 为了方便起见，它只是用一个小函数来将 ReactJS 组件转换为响应式视图函数</span><br><span class="line"></span><br><span class="line">对比Redux</span><br><span class="line">1. Mobx写法上更偏向于OOP</span><br><span class="line">2. 对一份数据直接进行修改操作，不需要始终返回一个新的数据</span><br><span class="line">3. 对typescript的支持更好一些</span><br><span class="line">4. 相关的中间件很少，逻辑层业务整合是一个问题</span><br></pre></td></tr></table></figure>
+
+<p><strong>Hooks</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">React为什么要搞一个Hooks</span><br><span class="line">复用一个有状态的组件太麻烦,react都核心思想就是，将一个页面拆成一堆独立的，可复用的组件，并且用自上而下的单向数据流的形式将这些组件串联起来。但假如你在大型的工作项目中用react，你会发现你的项目中实际上很多react组件冗长且难以复用。尤其是那些写成class的组件，它们本身包含了状态（state），所以复用这类组件就变得很麻烦, 之前官方推荐的解决方案是使用渲染属性(Render Props) 和高阶组件 (HOC Higher-Order Components) </span><br><span class="line"></span><br><span class="line">useEffect中定义的副作用函数的执行不会阻碍浏览器更新视图，也就是说这些函数是异步执行的，而之前的componentDidMount或componentDidUpdate中的代码则是同步执行的。这种安排对大多数副作用说都是合理的</span><br><span class="line"></span><br><span class="line">使用范围：只能在React函数式组件或自定义Hook中使用Hook</span><br><span class="line">不要在循环，条件或嵌套函数中调用Hook</span><br><span class="line">Hook通过数组实现的，每次useState 都会改变下标，React需要利用调用顺序来正确更新相应的状态，如果useState 被包裹循环或条件语句中，那每就可能会引起调用顺序的错乱，从而造成意想不到的错误。</span><br><span class="line"></span><br><span class="line">使用Hook的动机</span><br><span class="line">减少状态逻辑复用的风险</span><br><span class="line">避免地狱式嵌套</span><br><span class="line">让组件更容易理解</span><br><span class="line">使用函数代替class</span><br><span class="line"></span><br><span class="line">React 没有提供将可复用性行为“附加”到组件的途径</span><br><span class="line">一些解决此类问题的方案，比如 render props 和 高阶组件，由 providers，consumers，高阶组件，render props 等其他抽象层组成的组件会形成“嵌套地狱”，这说明了一个更深层次的问题：React 需要为共享状态逻辑提供更好的原生途径。</span><br><span class="line">使用 Hook 从组件中提取状态逻辑，使得这些逻辑可以单独测试并复用。Hook 使你在无需修改组件结构的情况下复用状态逻辑。 这使得在组件间或社区内共享 Hook 变得更便捷。</span><br><span class="line"></span><br><span class="line">只在最顶层使用 Hook，不要在循环，条件或嵌套函数中调用 Hook</span><br><span class="line">只在 React 函数中调用 Hook，不要在普通的 JavaScript 函数中调用 Hook</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">useEffect(() =&gt; &#123;</span><br><span class="line">	xxxx</span><br><span class="line">	return () =&gt; &#123; xxx &#125;</span><br><span class="line">&#125;,[yyy])</span><br><span class="line"> 相当于class组件中的  componentDidMount 和 componentDidUpdate:</span><br><span class="line">其中的 return函数相当于 componentWillUnmount</span><br><span class="line">第二个参数 [yyy] 则可限制仅在对 yyy 进行修改时更新， 作用类似于 shouldComponentUpdate</span><br><span class="line">如果执行只想运行一次的 effect ,类似 componentDidMount， 则传入空数组 []</span><br><span class="line">使用useEffect 调度的 effect 不会阻塞浏览器更新屏幕，让应用看起来反应更快</span><br><span class="line">一般情况下，effect不需要同步地执行</span><br><span class="line">特殊情况下，如测量布局，提供有 useLayoutEffect </span><br><span class="line">与 componentDidMount componentDidUpdate 不同，在浏览器完成布局和绘制之后，传给 useEffect的函数会延迟调用，因此不应该在函数中执行阻塞浏览器更新屏幕的操作</span><br><span class="line">然后，并非所有effect都要可以被延迟执行，例如，在浏览器执行下一次回之前，用户可见的DOM变更就必须同步执行，额外提供了 useLayoutEffect 来处理这类 effect， 它与 useEffect 结构相同，只是调用时机不同</span><br><span class="line">虽然 useEffect会在浏览器会之后延迟执行，但会爆炸在任何新渲染前执行</span><br><span class="line"></span><br><span class="line">useReducer</span><br><span class="line">useState 替代方案， 接受一个 (state, action) =&gt; newState 的 reducer，返回当前state及其配套 dispatch</span><br></pre></td></tr></table></figure>
+
+
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Hooks%E5%8F%8A%E5%85%B6%E4%BB%96%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="post-toc-number">1.</span> <span class="post-toc-text">Hooks及其他解决方案</span></a></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Dawninest's Blob website.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  </span>
+
+    </footer>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/index.js"></script>
+
+  
+  </div>
+</body>

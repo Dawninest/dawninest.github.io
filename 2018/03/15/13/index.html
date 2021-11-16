@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dark Force">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Dawninest</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+        GitHub</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2018/03/15/13/">
+        ReactNative | 图片预览插件(iOS)
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2018-03-15 00:00:00" datetime="2018-03-14T16:00:00.000Z" itemprop="datePublished">
+  2018-03-15
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactNative/" rel="tag">ReactNative</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="自制插件-picReader-记录"><a href="#自制插件-picReader-记录" class="headerlink" title="自制插件 picReader 记录"></a>自制插件 picReader 记录</h3><p>项目名: react-native-picReader-iOS</p>
+<p> <a target="_blank" rel="noopener" href="https://github.com/Dawninest/react-native-picReader-iOS">GitHub地址</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">开发遇到的难点有这么几个方面:</span><br><span class="line">1.图片缩放及拖动的极限及归位</span><br><span class="line">2.超长图的支持,根据尺寸设定特别的缩放系数</span><br><span class="line"></span><br><span class="line">关于拖动限制的计算思路</span><br><span class="line">参数：x,y 当前拖动界面的中心点坐标</span><br><span class="line">noteWidth,noteHeight 缩放后的实际宽高</span><br><span class="line">SCREEN_W,SCREEN_H 屏宽高</span><br><span class="line">需考虑的判断条件:</span><br><span class="line">图宽/图高&gt;屏宽/屏高 -宽填充满/高填充满</span><br><span class="line">图高:屏高 图宽:屏宽</span><br><span class="line">需满足的要求:</span><br><span class="line">拿 图高 &gt; 图宽 说明，反之同理</span><br><span class="line">1.图高&lt;屏高 图宽&lt;屏宽 时，图片的中心点与屏幕中心点一致，不允许拖动</span><br><span class="line">2.图高&gt;屏高 图宽&lt;屏宽 时，只允许上下拖动(限制上下极限)，不允许左右拖动</span><br><span class="line">3.图高&gt;屏高 图宽&gt;屏宽 时，允许上下拖动(限制上下极限)，左右拖动(限制左右极限)</span><br></pre></td></tr></table></figure>
+
+
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%87%AA%E5%88%B6%E6%8F%92%E4%BB%B6-picReader-%E8%AE%B0%E5%BD%95"><span class="post-toc-number">1.</span> <span class="post-toc-text">自制插件 picReader 记录</span></a></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Dawninest's Blob website.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  </span>
+
+    </footer>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/index.js"></script>
+
+  
+  </div>
+</body>

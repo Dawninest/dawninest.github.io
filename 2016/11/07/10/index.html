@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dark Force">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Dawninest</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+        GitHub</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2016/11/07/10/">
+        JavaScript | h5中的js
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2016-11-07 00:00:00" datetime="2016-11-06T16:00:00.000Z" itemprop="datePublished">
+  2016-11-07
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script stype=“text/javascript”&gt;  &lt;/script&gt;</span><br><span class="line">&lt;script stype=“js内容.js”&gt;  &lt;/script&gt;</span><br><span class="line">可放到html中的任意位置，不过前面的会被先执行</span><br></pre></td></tr></table></figure>
+
+<h3 id="alert"><a href="#alert" class="headerlink" title="alert"></a>alert</h3><p>document.write</p>
+<ul>
+<li><p>confirm - 是否选项框 eg:var bool = confirm(“??”) 选择是，返回true，选择否，返回 false</p>
+</li>
+<li><p>prompt - 消息对话框(包含 确定按钮，取消按钮，文本输入框) eg: prompt(str1,str2) str1对话框文本，不可更改 str2对话框内容，可修改</p>
+</li>
+</ul>
+<h3 id="window-open-URL-窗口名称-参数字符串"><a href="#window-open-URL-窗口名称-参数字符串" class="headerlink" title="window.open([URL],[窗口名称],[参数字符串])"></a>window.open([URL],[窗口名称],[参数字符串])</h3><p>URL：网址或路径</p>
+<p>窗口名称：可由字母数字和下划线字符组成；_blank-新窗口显示目标网页／_self-在当前窗口显示目标网页／-top-框架网页中在上部窗口中显示目标网页；相同name的窗口只能创建一个</p>
+<p>参数字符串：</p>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">值</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">top</td>
+<td align="center">number</td>
+<td align="center">窗口顶部离开屏幕顶部的像素</td>
+</tr>
+<tr>
+<td align="center">left</td>
+<td align="center">number</td>
+<td align="center">窗口左端离开屏幕左端的像素</td>
+</tr>
+<tr>
+<td align="center">width</td>
+<td align="center">number</td>
+<td align="center">窗口宽度</td>
+</tr>
+<tr>
+<td align="center">height</td>
+<td align="center">number</td>
+<td align="center">窗口高度</td>
+</tr>
+<tr>
+<td align="center">menubar</td>
+<td align="center">yes,no</td>
+<td align="center">窗口有没有菜单</td>
+</tr>
+<tr>
+<td align="center">toolbar</td>
+<td align="center">yes,no</td>
+<td align="center">窗口有没有工具条</td>
+</tr>
+<tr>
+<td align="center">scrollbars</td>
+<td align="center">yes,no</td>
+<td align="center">窗口有没有滚动条</td>
+</tr>
+<tr>
+<td align="center">status</td>
+<td align="center">yes,no</td>
+<td align="center">窗口有没有状态栏</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">close() 关闭窗口</span><br><span class="line">window.close();	关闭窗口</span><br><span class="line">&lt;窗口对象&gt;.close();		关闭指定窗口</span><br></pre></td></tr></table></figure>
+
+<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a><strong>DOM</strong></h3><p>文档对象模型DOM(Document Object Model) 定义访问和处理HTML对象文档的标准方法。</p>
+<p>DOM将HTML文档呈现为带有元素、属性和文本的树结构(节点树)</p>
+<ul>
+<li><p>通过标签获取元素 document.getElementById(“id”)</p>
+</li>
+<li><p>innerHTML属性 - 用于获取或替换HTML元素的内容</p>
+<p>语法：Object.innerHTML   Object是获取的元素对象，</p>
+</li>
+<li><p>改变HTML元素的样式  Object.style.property=new style;</p>
+<p>object.style.display 制定标签的显示和隐藏  none-隐藏 block-显示</p>
+</li>
+<li><p>设置或返回元素的class属性-className        语法：object.className = class</p>
+</li>
+</ul>
+<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">onclick			鼠标单击事件</span><br><span class="line">onmouseover		鼠标经过事件</span><br><span class="line">onmouseout		鼠标移开事件</span><br><span class="line">onchange 		文本框内容改变事件</span><br><span class="line">onselect			文本框内容选中事件</span><br><span class="line">onfocus			光标聚集</span><br><span class="line">onblur			光标离开</span><br><span class="line">onload			网页导入</span><br><span class="line">onunloaf			关闭网页</span><br></pre></td></tr></table></figure>
+
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><h4 id="字符串对象-string"><a href="#字符串对象-string" class="headerlink" title="字符串对象 string"></a>字符串对象 string</h4><p>返回指定位置字符 string.charAt(index);</p>
+<p>返回指定字符串首次出现的位置 string.indexOf()</p>
+<p>字符串分割 string.split()</p>
+<p>提取字符串 string.substring(x,y) 开始位置，结束位置</p>
+<p>提取指定数目字符 string.substr(x,z) 开始位置，截取长度</p>
+<h4 id="数组对象-Array"><a href="#数组对象-Array" class="headerlink" title="数组对象 Array"></a>数组对象 Array</h4><p>数组连接 concat(arr1,arr2)</p>
+<p>指定分隔符连接数组元素 arr.join(分隔符)</p>
+<p>颠倒数组元素顺序  arr.reverse()</p>
+<p>选定元素 arr.slice(x,y) 开始序号，结束序号 括号里只有一个数字指从这开始到最后</p>
+<p>排序 arr.sort(f()) f()-排序方法</p>
+<h4 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">alert()			显示带有一段消息和一个确认按钮的警告框</span><br><span class="line">prompt()			显示可提示用户输入的对话框</span><br><span class="line">open()			显示带有一段消息以及确认按钮和取消按钮的对话框</span><br><span class="line">close()			打开一个新的浏览器窗口或查找一个已命名的窗口</span><br><span class="line">print()			打印当前窗口内容</span><br><span class="line">focus()			把键盘焦点给予一个窗口</span><br><span class="line">blur()			把键盘焦点从顶层窗口已开</span><br><span class="line">moveBy()			可相对窗口的当前坐标把它移动指定的像素</span><br><span class="line">moveTo()			把窗口的左上角移动到一个指定的坐标</span><br><span class="line">resizeBy()		按照指定的像素调整窗口的大小</span><br><span class="line">resizeTo()			把窗口的大小调整到指定的宽度和高度</span><br><span class="line">scrollBy()			按照指定的像素值来滚动内容</span><br><span class="line">scrollTo()			把内容滚动到指定坐标</span><br><span class="line">serInterval()		每隔指定时间执行代码</span><br><span class="line">setTimeOut()		在指定的延迟时间之后来执行代码</span><br><span class="line">clearInterval()		取消serInterval()的设置</span><br><span class="line">clearTimeOut()	取消setTimeOut()的设置</span><br></pre></td></tr></table></figure>
+
+<h4 id="History对象"><a href="#History对象" class="headerlink" title="History对象"></a>History对象</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">window.history.[属性|方法]</span><br><span class="line">返回上一页 window.history.back();   back() = go(-1)</span><br><span class="line">返回下一个浏览界面 window.history.forward();   forward()=go(1)</span><br><span class="line">返回指定页面 window.history.go(number)</span><br></pre></td></tr></table></figure>
+
+<h4 id="Location对象"><a href="#Location对象" class="headerlink" title="Location对象"></a>Location对象</h4><p>用户获取或设置窗体的URL，并且可以用于解析URL</p>
+<p>Location.[属性|方法]</p>
+<h4 id="Navigator对象"><a href="#Navigator对象" class="headerlink" title="Navigator对象"></a>Navigator对象</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">appCodeName 浏览器代码名的字符串表示</span><br><span class="line">appName 返回浏览器的名称</span><br><span class="line">appVersion 返回浏览器的平台和版本信息</span><br><span class="line">platform 返回运行浏览器的系统操作平台</span><br><span class="line">userAgent 返回由客户机发送服务器的 user-agent 头部的值 -即 浏览器内核</span><br></pre></td></tr></table></figure>
+
+<h4 id="screen对象"><a href="#screen对象" class="headerlink" title="screen对象"></a>screen对象</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">window.screen.属性</span><br><span class="line">avaiHeight 窗口可以使用的屏幕高度</span><br><span class="line">avaiWidth 窗口可以使用的屏幕宽度</span><br><span class="line">colorDepth 浏览器表示的颜色位数 -一般32位</span><br><span class="line">pixDepth 浏览器表示的颜色位数 -一般32位（IE不支持这个属性）</span><br><span class="line">height 屏幕高度</span><br><span class="line">width 屏幕宽度</span><br></pre></td></tr></table></figure>
+
+<h4 id="DOM-1"><a href="#DOM-1" class="headerlink" title="DOM"></a>DOM</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">元素节点</span><br><span class="line">文本节点</span><br><span class="line">属性节点</span><br><span class="line"></span><br><span class="line">getElementsById()</span><br><span class="line">getElementsByName()</span><br><span class="line">getElementsByTagName()</span><br><span class="line">elementNode.getAttribute().  通过元素节点的属性名称获取属性的值</span><br><span class="line">elementNode.setAttribute(name,value).	  增加一个指定名称和值的新属性，或者把一个现有的属性设定为指定的值 </span><br><span class="line">节点属性 </span><br><span class="line">nodeName:节点名称</span><br><span class="line">元素节点与标签名相同-属性节点是属性的名称-文本节点为#text-文档节点#document   </span><br><span class="line">nodeValue:节点值</span><br><span class="line">元素节点为undefined/null.-文本节点为文本本-属性节点为属性的值</span><br><span class="line">nodeType:节点的类型</span><br><span class="line">元素1-属性2-文本3-注释8-文档9</span><br><span class="line"></span><br><span class="line">elementNode.childNodes() 访问子节点。    firstChild-lastChild</span><br><span class="line">nextSibling返回某个节点之后紧跟的节点</span><br><span class="line">previousSibling返回某个节点之前紧跟的节点</span><br></pre></td></tr></table></figure>
+
+
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#alert"><span class="post-toc-number">1.</span> <span class="post-toc-text">alert</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#window-open-URL-%E7%AA%97%E5%8F%A3%E5%90%8D%E7%A7%B0-%E5%8F%82%E6%95%B0%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="post-toc-number">2.</span> <span class="post-toc-text">window.open([URL],[窗口名称],[参数字符串])</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DOM"><span class="post-toc-number">3.</span> <span class="post-toc-text">DOM</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BA%8B%E4%BB%B6"><span class="post-toc-number">4.</span> <span class="post-toc-text">事件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="post-toc-number">5.</span> <span class="post-toc-text">对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AF%B9%E8%B1%A1-string"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">字符串对象 string</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1-Array"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">数组对象 Array</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#window%E5%AF%B9%E8%B1%A1"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">window对象</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#History%E5%AF%B9%E8%B1%A1"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">History对象</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Location%E5%AF%B9%E8%B1%A1"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">Location对象</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Navigator%E5%AF%B9%E8%B1%A1"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">Navigator对象</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#screen%E5%AF%B9%E8%B1%A1"><span class="post-toc-number">5.7.</span> <span class="post-toc-text">screen对象</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#DOM-1"><span class="post-toc-number">5.8.</span> <span class="post-toc-text">DOM</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Dawninest's Blob website.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  </span>
+
+    </footer>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/index.js"></script>
+
+  
+  </div>
+</body>

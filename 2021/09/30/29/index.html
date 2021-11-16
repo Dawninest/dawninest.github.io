@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dark Force">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Dawninest</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+        GitHub</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/09/30/29/">
+        React Native | 整理的一些面试题
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-09-30 00:00:00" datetime="2021-09-29T16:00:00.000Z" itemprop="datePublished">
+  2021-09-30
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactNative/" rel="tag">ReactNative</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="ReactNative-面试知识点"><a href="#ReactNative-面试知识点" class="headerlink" title="ReactNative 面试知识点"></a>ReactNative 面试知识点</h2><p>1.从输入url到页面显示发生了什么</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. DNS解析, 通过域名去找到IP</span><br><span class="line">2. TCP连接</span><br><span class="line">3. 发送http请求(8种https的请求方式: GET,HEAD,POST,PUT,DELETE,CONNECT,OPTIONS,TRACE)</span><br><span class="line">4. 服务器处理请求并返回HTTP报文</span><br><span class="line">5. 浏览器解析渲染页面(边解析边渲染,解析HTML文件构建DOM树,然后解析CSS文件渲染树)</span><br><span class="line">6. 连接结束</span><br></pre></td></tr></table></figure>
+
+<p>2.react单向数据流</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">核心思想是组件不回改变接收的数据,只监听数据的变化,当数据发生变化时,它们会使用接收到的新值,而不是去修改已有的值,当组件的更新机制触发后,他们知识使用新值进行重新渲染</span><br></pre></td></tr></table></figure>
+
+<p>3.react的生命周期</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">当组件实例被创建并插入 DOM 中时，其生命周期调用顺序如下</span><br><span class="line">constructor()</span><br><span class="line">static getDerivedStateFromProps()</span><br><span class="line">会在调用 render 方法之前调用，并且在初始挂载及后续更新时都会被调用。它应返回一个对象来更新 state，如果返回 null 则不更新任何内容。</span><br><span class="line">render()</span><br><span class="line">componentDidMount()</span><br><span class="line"></span><br><span class="line">componentWillMount() // 该方法即将过期，避免使用</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">当组件的 props 或 state 发生变化时会触发更新。组件更新的生命周期调用顺序如下</span><br><span class="line">static getDerivedStateFromProps()</span><br><span class="line">shouldComponentUpdate()</span><br><span class="line">render()</span><br><span class="line">getSnapshotBeforeUpdate()</span><br><span class="line">在最近一次渲染输出（提交到 DOM 节点）之前调用。它使得组件能在发生更改之前从 DOM 中捕获一些信息（例如，滚动位置）。此生命周期的任何返回值将作为参数传递给componentDidUpdate()</span><br><span class="line">componentDidUpdate()</span><br><span class="line"></span><br><span class="line">componentWillUpdate() // 该方法即将过期，避免使用</span><br><span class="line">componentWillReceiveProps() // 该方法即将过期，避免使用</span><br><span class="line"></span><br><span class="line">组件卸载</span><br><span class="line">componentWillUnmount()</span><br><span class="line"></span><br><span class="line">错误处理</span><br><span class="line">static getDerivedStateFromError()</span><br><span class="line">componentDidCatch()</span><br><span class="line"></span><br><span class="line">forceUpdate()</span><br><span class="line">默认情况下，当组件的 state 或 props 发生变化时，组件将重新渲染。如果 render() 方法依赖于其他数据，则可以调用 forceUpdate() 强制让组件重新渲染。</span><br><span class="line">调用 forceUpdate() 将致使组件调用 render() 方法，此操作会跳过该组件的 shouldComponentUpdate()。但其子组件会触发正常的生命周期方法，包括 shouldComponentUpdate() 方法。如果标记发生变化，React 仍将只更新 DOM。</span><br><span class="line">通常你应该避免使用 forceUpdate()，尽量在 render() 中使用 this.props 和 this.state。</span><br></pre></td></tr></table></figure>
+
+<p>4.pureComponent原理</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">组件更新时,如果 state和props都没有发生变化,render方法就不会触发,省去DOM生成和对比的过程,</span><br><span class="line">本质上只比较新值和旧值长度是否一样,每一个key是否都有,只比较了第一层的值,浅比较,深层次的嵌套数据对比不出来</span><br></pre></td></tr></table></figure>
+
+<p>5.一些js特殊情况</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">typeof NaN // “number”</span><br><span class="line">0.5+0.1 == 0.6 // true</span><br><span class="line">0.1+0.2 -- 0.3 // false 0.3000000000004</span><br><span class="line">[]+[] // &quot;&quot;</span><br><span class="line">[]==[] // false</span><br><span class="line">[]+&#123;&#125; //&quot;[object object]&quot;</span><br><span class="line">&#123;&#125;+[] // 0</span><br><span class="line">true+true+true === 3 // true</span><br><span class="line">true-true // 0</span><br><span class="line">true == 1 // true</span><br><span class="line">true === 1 // false</span><br><span class="line">9+&quot;1&quot; // &quot;91&quot;</span><br><span class="line">91-&quot;1&quot; // 90</span><br><span class="line"></span><br><span class="line">[]==0 // true</span><br><span class="line">正则不能比较,每个正则都是唯一的</span><br></pre></td></tr></table></figure>
+
+<p>6.性能调优</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">1. JavaScript线程的性能在开发模式下很糟糕,</span><br><span class="line">2. 使用React Navigation此类工具库来解决页面切换问题</span><br><span class="line">3. 发布版中屏蔽console.log</span><br><span class="line">4. 使用FlatList或SectionList来替代ListView,如果FlatList渲染慢,使用getItemLayout</span><br><span class="line">5. scrollView会一口气将其所有的子组件加载出来,需要合理利用</span><br><span class="line">6. 开发布局时减少View层的嵌套</span><br><span class="line">7. 合理利用shouldComponentUpdate来手动控制当前页面是否重绘,</span><br><span class="line">8. 利用PureComponent,如果state改变过程中做的浅拷贝,将不会做渲染</span><br><span class="line">9. 列表等重复组件设置key,在进行diff算法时,有key将会减少大量的遍历操作</span><br><span class="line">10. 在iOS上,修改Image组件的宽度或者高度,需要重新裁剪和缩放原始图片,性能开销特别大,此时建议使用 transform:[&#123;scale&#125;]</span><br><span class="line">11. 将setState放进setTimeout中延迟到下一轮中进行,能处理很多setState之后卡顿或者无响应的问题</span><br><span class="line">12. 内联引用(require代替import)可以实现文件或模块的懒加载,只有实际用到时才加载,可用于优化首屏渲染速度(比较新的RN源码已经改为了模块按需加载)</span><br><span class="line">13. 保持RN及react-navigation的版本更新,</span><br><span class="line">14. 减少更新或者合并多个更新</span><br><span class="line">15. InteractionManager.runAfterInteractions(()=&gt;&#123;&#125;) 在动画或者操作结束后执行  </span><br><span class="line">    this.requestAnimationFrame(()=&gt;&#123;&#125;) 在下一帧就立刻执行回调</span><br><span class="line">    setNativeProps 直接在低层更新Native组件属性,从而避免渲染组件结构和同步太多试图变化带来的大料开销,虽然带来性能提升,但是会让代码逻辑混乱</span><br><span class="line">16. 使用动画来是变化连贯,提升体验 LayoutAnimation</span><br><span class="line">17. 本地化分包,bundle体积过大会导致加载慢</span><br><span class="line">18. 习惯设置默认值,判断对象是否存在,判断数组长度等操作</span><br><span class="line">19. 导入Redux 或者 Mobx 框架(个人尝试后觉得Mobx框架对性能及易用性提升更显著)</span><br><span class="line">20. 尝试使用Hooks制作函数组件能有效提升性能</span><br></pre></td></tr></table></figure>
+
+<p>7.this的作用域</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 在函数体外,this指的是window对象</span><br><span class="line">2. 在函数体内,谁调用函数,this就指向谁</span><br><span class="line">3. 构造函数内,this指新创建的对象</span><br><span class="line">4. 在html的标签中,this指的是当前的这个标签元素</span><br><span class="line">5. 在ES6中,对于箭头函数,本身无this,所以看它创建的位置,和当前函数的作用域,</span><br></pre></td></tr></table></figure>
+
+<p>8.<strong>diff 算法</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">eact 通过setState界面刷新时，并不会马上对所有真实的 DOM 节点进行操作，而是先通过 diff 算法计算。然后，再对有变化的 DOM 节点进行操作（native 是对原生 UI 层进行操作），具体刷新步骤如下：</span><br><span class="line">1.state 变化，生成新的 Virtual Dom；</span><br><span class="line">2.比较 Virtual Dom 与之前 Virtual Dom 的异同；</span><br><span class="line">3.生成差异对象；</span><br><span class="line">4.遍历差异对象并更新真实 DOM；</span><br><span class="line"></span><br><span class="line">DOM 操作很耗时，使用 JS 对象来模拟 DOM Tree，在渲染更新时，先对 JS 对象进行操作，再批量将 JS 对象 Virtual Dom 渲染成 DOM Tree，从而减少对 DOM 的操作，提升性能</span><br><span class="line"></span><br><span class="line">Virtual Dom 本质是用来模拟 DOM 的 JS 对象。一般含有标签名（tag）、属性（props）和子元素对象（children）三个属性</span><br><span class="line"></span><br><span class="line">React Diff 算法相对于传统的 diff 算法，复杂度从 O(n^3)降到 O(n)</span><br><span class="line">React基于以下的两个假设，减少了不必要的计算：</span><br><span class="line">1.两个相同组件将会生成相似的DOM结构，两个不同组件将会生成不同的DOM结构。</span><br><span class="line">2.对于同一层次的一组子节点，它们可以通过唯一的id进行区分。</span><br><span class="line"></span><br><span class="line">对于假设 1: 两个相同组件，一般指的是相同的类，包含 React 官方定义的组件（View，Text）和程序员自定义的组件（这也是React 组件化开发的一个原因，可以提升 diff 算法的效率）；</span><br><span class="line">对于假设 2: 一般指的是使用map遍历生成的列表视图或者使用ListView/FlatList等列表组件；</span><br><span class="line"></span><br><span class="line">相同类型节点的比较：</span><br><span class="line">由于新旧节点类型相同，DOM 结构没有发生变化，仅对属性（style）进行重设从而实现节点的转换和界面的更新，这种情况，通过这类diff算法计算后，会调用 Native的 updateView 来刷新界面</span><br><span class="line"></span><br><span class="line">不同节点类型的比较：</span><br><span class="line">首先抽象成 DOM tree 节点模型，然后从父节点到子节点意义对比，最后确定需要更新的节点最小单位</span><br><span class="line">通过这类diff算法计算后，会调用 Native的 manageChildren 来刷新界面</span><br><span class="line"></span><br><span class="line">列表节点的比较：</span><br><span class="line">在渲染列表节点时，它们一般都有相同的结构，只是内容有些不同而已，常见的，如使用map遍历生成的列表视图或者ListView/FlatList等列表组件，如果开发的时候没有写 key，编译器会给出警告提示</span><br><span class="line">通过唯一的 key 进行区分，通过给每个节点添加唯一的 key，可以极大的简化 diff 算法，减少对 DOM 的操作。列表节点的比较主要有添加节点、删除节点、节点排序三种场景，js层diff算法计算后，会调用 Native的 manageChildren 来刷新界面</span><br></pre></td></tr></table></figure>
+
+
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ReactNative-%E9%9D%A2%E8%AF%95%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="post-toc-number">1.</span> <span class="post-toc-text">ReactNative 面试知识点</span></a></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Dawninest's Blob website.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  </span>
+
+    </footer>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/index.js"></script>
+
+  
+  </div>
+</body>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dark Force">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Dawninest</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+        GitHub</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2016/03/22/09/">
+        Objective-C | 动画
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2016-03-22 00:00:00" datetime="2016-03-21T16:00:00.000Z" itemprop="datePublished">
+  2016-03-22
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="UIView动画"><a href="#UIView动画" class="headerlink" title="UIView动画"></a><strong>UIView</strong>动画</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[UIView animateWithDuration:1 delay:1 options:UIViewAnimationOptionCurveLinear animations:^&#123;</span><br><span class="line">        xxx</span><br><span class="line">&#125; completion:^(BOOL finished) &#123;</span><br><span class="line">				xxx</span><br><span class="line">&#125;];</span><br><span class="line">animateWithDuration-动画持续时间</span><br><span class="line">delay-动画延迟时间</span><br><span class="line">options-动画渐入渐出</span><br><span class="line">动画线性效果选择－options</span><br><span class="line">UIViewAnimationOptionCurveEaseInOut 匀加速－匀速－匀减速</span><br><span class="line">UIViewAnimationOptionCurveEaseIn    匀加速－匀速</span><br><span class="line">UIViewAnimationOptionCurveEaseOut   匀速－匀减速</span><br><span class="line">UIViewAnimationOptionCurveLinear    匀速</span><br><span class="line">animations-在动画持续时间内执行的变幻</span><br><span class="line">completion-该动画持续时间结束后执行的下一步动作，可在此嵌套下一步动画</span><br></pre></td></tr></table></figure>
+
+<h4 id="缩放"><a href="#缩放" class="headerlink" title="缩放"></a>缩放</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_animationView.transform = CGAffineTransformScale(_animationView.transform, 0.5, 0.5);</span><br></pre></td></tr></table></figure>
+
+<h4 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_animationView.transform = CGAffineTransformRotate(_animationView.transform, M_PI_4);</span><br></pre></td></tr></table></figure>
+
+<h4 id="变换动作－翻转"><a href="#变换动作－翻转" class="headerlink" title="变换动作－翻转"></a>变换动作－翻转</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[UIView transitionWithView:_animationView duration:1 options:UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:nil];</span><br><span class="line"></span><br><span class="line">options 多个可用 | 间隔</span><br><span class="line">翻转独有线性效果选项</span><br><span class="line">     UIViewAnimationOptionTransitionFlipFromLeft</span><br><span class="line">     UIViewAnimationOptionTransitionFlipFromRight</span><br></pre></td></tr></table></figure>
+
+<h4 id="弹性动画"><a href="#弹性动画" class="headerlink" title="弹性动画"></a>弹性动画</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">usingSpringWithDamping 阻尼系数 0-1 越小越明显</span><br><span class="line">initialSpringVelocity 初始速度</span><br><span class="line"></span><br><span class="line">[UIView animateWithDuration:0.2 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0 options:0 animations:^&#123;</span><br><span class="line"></span><br><span class="line">&#125; completion:^(BOOL finished)&#123;</span><br><span class="line"></span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+
+<p>补充</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">UIViewAnimationOptions详细</span><br><span class="line">UIViewAnimationOptionLayoutSubviews //动画过程中保证子视图跟随运动</span><br><span class="line">UIViewAnimationOptionAllowUserInteraction //动画时允许用户交流，比如触摸</span><br><span class="line">UIViewAnimationOptionBeginFromCurrentState //所有视图从当前状态开始动画</span><br><span class="line">UIViewAnimationOptionRepeat //动画无限重复</span><br><span class="line">UIViewAnimationOptionAutoreverse //动画运行到结束点后仍然以动画方式回到初始点，前提是设置动画无限重复</span><br><span class="line">UIViewAnimationOptionOverrideInheritedDuration //忽略外层动画嵌套的执行时间</span><br><span class="line">UIViewAnimationOptionOverrideInheritedCurve //忽略外层动画嵌套的时间变化曲线</span><br><span class="line">UIViewAnimationOptionAllowAnimatedContent //通过改变属性和重绘实现动画效果，如果key没有提交动画将使用快照</span><br><span class="line">UIViewAnimationOptionShowHideTransitionViews //用显隐的方式替代添加移除图层的动画效果</span><br><span class="line">UIViewAnimationOptionOverrideInheritedOptions //不继承父动画设置或动画类型</span><br><span class="line">时间函数曲线相关</span><br><span class="line">UIViewAnimationOptionCurveEaseInOut //时间曲线函数，由慢到快</span><br><span class="line">UIViewAnimationOptionCurveEaseIn //时间曲线函数，由慢到特别快</span><br><span class="line">UIViewAnimationOptionCurveEaseOut //时间曲线函数，由快到慢</span><br><span class="line">UIViewAnimationOptionCurveLinear //时间曲线函数，匀速</span><br><span class="line">转场动画相关的</span><br><span class="line">UIViewAnimationOptionTransitionNone //无转场动画</span><br><span class="line">UIViewAnimationOptionTransitionFlipFromLeft //转场从左翻转</span><br><span class="line">UIViewAnimationOptionTransitionFlipFromRight //转场从右翻转</span><br><span class="line">UIViewAnimationOptionTransitionCurlUp //上卷转场</span><br><span class="line">UIViewAnimationOptionTransitionCurlDown //下卷转场</span><br><span class="line">UIViewAnimationOptionTransitionCrossDissolve //转场交叉消失</span><br><span class="line">UIViewAnimationOptionTransitionFlipFromTop //转场从上翻转</span><br><span class="line">UIViewAnimationOptionTransitionFlipFromBottom //转场从下翻转</span><br><span class="line">关键帧</span><br><span class="line">UIViewKeyframeAnimationOptionCalculationModeLinear    </span><br><span class="line">UIViewKeyframeAnimationOptionCalculationModeDiscrete   </span><br><span class="line">UIViewKeyframeAnimationOptionCalculationModePaced      </span><br><span class="line">UIViewKeyframeAnimationOptionCalculationModeCubic      </span><br><span class="line">UIViewKeyframeAnimationOptionCalculationModeCubicPaced</span><br></pre></td></tr></table></figure>
+
+<h3 id="高级动画"><a href="#高级动画" class="headerlink" title="高级动画"></a>高级动画</h3><h3 id="CALayer-图层"><a href="#CALayer-图层" class="headerlink" title="CALayer 图层"></a><strong>CALayer</strong> 图层</h3><p>初始化</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@property (nonatomic,strong) CALayer *layer;</span><br><span class="line"> _layer = [CALayer layer];</span><br><span class="line"> _layer.backgroundColor = [UIColor colorWithRed:0.91 green:0.34 blue:0.31 alpha:1].CGColor;</span><br><span class="line">_layer.bounds = CGRectMake(0, 0, 50, 50);</span><br><span class="line">_layer.position = self.view.center;//设置中旬点</span><br><span class="line">_layer.shadowColor = [UIColor colorWithRed:0.21 green:0.6 blue:0.93 alpha:1].CGColor;</span><br><span class="line">_layer.shadowOffset = CGSizeMake(3, 3);</span><br><span class="line">_layer.shadowOpacity = 0.8; 透明度</span><br><span class="line">设置锚点,锚点的位置永远和中心点重合</span><br><span class="line">默认(0.5,0.5),即中心点，按照比例取值,(0,0)左上角,(1,1)右下角</span><br><span class="line">_layer.anchorPoint = CGPointMake(1, 1);</span><br><span class="line">[self.view.layer addSublayer:_layer];</span><br></pre></td></tr></table></figure>
+
+<p>重写触摸事件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- (void)touchesBegan:(NSSet&lt;UITouch *&gt; *)touches withEvent:(UIEvent *)event</span><br><span class="line">&#123;</span><br><span class="line">    [super touchesBegan:touches withEvent:event];</span><br><span class="line">    UITouch *touch = touches.anyObject;</span><br><span class="line">    CGPoint touchPoint = [touch locationInView:self.view];</span><br><span class="line">    CGFloat width = _layer.bounds.size.width;</span><br><span class="line">    if (width == 50) &#123;</span><br><span class="line">        width = 50 * 4;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        width = 50;</span><br><span class="line">    &#125;</span><br><span class="line">    _layer.bounds = CGRectMake(0, 0, width, width);</span><br><span class="line">    _layer.position = touchPoint;</span><br><span class="line">&#125;</span><br><span class="line">在使用CALayer 图层动画的时候，初始化之后的属性变化会自动以动画形式展现</span><br></pre></td></tr></table></figure>
+
+<h4 id="CATransition-过渡动画"><a href="#CATransition-过渡动画" class="headerlink" title="CATransition 过渡动画"></a><strong>CATransition</strong> 过渡动画</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">CATransition *animation = [CATransition animation];</span><br><span class="line">持续时间</span><br><span class="line">animation.duration = 0.5;</span><br><span class="line">线性规律</span><br><span class="line">animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];</span><br><span class="line">/*私有API 不可用于上架</span><br><span class="line"> cube、suckEffect、oglFlip、rippleEffect、pageCurl、pageUnCurl</span><br><span class="line"> cameraIrisHollowOpen、cameraIrisHollowClose</span><br><span class="line"> */</span><br><span class="line">animation.type = @&quot;rippleEffect&quot;;</span><br><span class="line">过渡动画类型 kCATransition</span><br><span class="line">kCATransitionFade</span><br><span class="line">kCATransitionMoveIn</span><br><span class="line">kCATransitionPush</span><br><span class="line">kCATransitionReveal </span><br><span class="line">animation.type = kCATransitionPush;</span><br><span class="line"></span><br><span class="line">配置转场动画子类型</span><br><span class="line">animation.subtype = kCATransitionFromLeft;</span><br><span class="line">添加动画</span><br><span class="line">[self.view.layer addAnimation:animation forKey:@&quot;transition&quot;];</span><br></pre></td></tr></table></figure>
+
+<h4 id="CABasicAnimation-基础动画"><a href="#CABasicAnimation-基础动画" class="headerlink" title="CABasicAnimation 基础动画"></a><strong>CABasicAnimation</strong> 基础动画</h4><p>先确定基础动画的类型</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@&quot;position&quot;];</span><br><span class="line">持续时间</span><br><span class="line">positionAnimation.duration = 0.5;</span><br><span class="line">运动线性</span><br><span class="line">positionAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];</span><br><span class="line">动画的初始值-默认初始化的属性</span><br><span class="line">positionAnimation.fromValue = [NSValue valueWithCGPoint:self.view.center];</span><br><span class="line">动画的终止值</span><br><span class="line">positionAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetMidX(self.view.bounds), 100)];</span><br><span class="line">动画完成后是否回到原位，默认yes</span><br><span class="line">positionAnimation.removedOnCompletion = NO;</span><br><span class="line">positionAnimation.fillMode = kCAFillModeBoth;</span><br><span class="line">决定当前对象在非active时间段的行为.比如动画开始之前,动画结束之后</span><br><span class="line">     kCAFillModeRemoved 这个是默认值,也就是说当动画开始前和动画结束后,动画对layer都没有影响,动画结束后,layer会恢复到之前的状态</span><br><span class="line">     kCAFillModeForwards 当动画结束后,layer会一直保持着动画最后的状态.</span><br><span class="line">     kCAFillModeBackwards 在动画开始前,你只要将动画加入了一个layer,layer便立即进入动画的初始状态并等待动画开始. 你可以这样设定测试代码,将一个动画加入一个layer的时候延迟5秒执行.然后就会发现在动画没有开始的时候,只要动画被加入了layer,layer便处于动画初始状态</span><br><span class="line">     kCAFillModeBoth 这个其实就是上面两个的合成.动画加入后开始之前,layer便处于动画初始状态,动画结束后layer保持动画最后的状</span><br><span class="line">添加动画</span><br><span class="line">[self.view.layer addAnimation:positionAnimation forKey:@&quot;position&quot;];</span><br></pre></td></tr></table></figure>
+
+<p>animationWithKeyPath可选类型有</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">transform.scale  比例转换</span><br><span class="line">transform.scale.x  宽的比例轉換</span><br><span class="line">transform.scale.y  高的比例轉換</span><br><span class="line">transform.rotation.z  平面园的旋轉</span><br><span class="line">opacity  透明度</span><br><span class="line">margin  边缘</span><br><span class="line">zPosition  </span><br><span class="line">backgroundColor    背景颜色</span><br><span class="line">cornerRadius    圆角</span><br><span class="line">borderWidth 边框宽度</span><br><span class="line">bounds 大小</span><br><span class="line">contents 内容</span><br><span class="line">contentsRect 内容矩形</span><br><span class="line">cornerRadius 圆角半径</span><br><span class="line">frame 位置及尺寸</span><br><span class="line">hidden 隐藏</span><br><span class="line">mask 遮罩</span><br><span class="line">masksToBounds 遮住边界</span><br><span class="line">position 位置</span><br><span class="line">shadowColor 阴影颜色</span><br><span class="line">shadowOffset 阴影偏移</span><br><span class="line">shadowOpacity 阴影透明度</span><br><span class="line">shadowRadius 阴影半径</span><br></pre></td></tr></table></figure>
+
+<h4 id="CAKeyframeAnimation-关键帧动画"><a href="#CAKeyframeAnimation-关键帧动画" class="headerlink" title="CAKeyframeAnimation 关键帧动画"></a><strong>CAKeyframeAnimation</strong> 关键帧动画</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">CAKeyframeAnimation *keyFrameAnimation = [CAKeyframeAnimation animationWithKeyPath:@&quot;position&quot;];</span><br><span class="line">keyFrameAnimation.duration = 2;</span><br><span class="line">keyFrameAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];</span><br><span class="line">利用贝塞尔曲线绘制动画路径</span><br><span class="line">UIBezierPath *path = [UIBezierPath bezierPath];</span><br><span class="line">曲线起点</span><br><span class="line">[path moveToPoint:self.view.center];</span><br><span class="line">曲线轨迹(运动中将经过的点)</span><br><span class="line">[path addLineToPoint:CPM(MID_X, MID_Y + 200)];</span><br><span class="line">[path addLineToPoint:CPM(MID_X + 100, MID_Y + 200)];</span><br><span class="line">闭合路径</span><br><span class="line">[path addLineToPoint:CPM(MID_X + 100, MID_Y + 0)];</span><br><span class="line">设置动画的路径</span><br><span class="line">keyFrameAnimation.path = path.CGPath;</span><br><span class="line">keyFrameAnimation.removedOnCompletion = NO;</span><br><span class="line">keyFrameAnimation.fillMode = kCAFillModeForwards;</span><br><span class="line">配置关键帧的时间控制－按照比例分配每一段运动轨迹时间</span><br><span class="line">keyFrameAnimation.keyTimes = @[@&quot;0.0&quot;,@&quot;0.5&quot;,@&quot;0.75&quot;,@&quot;1.0&quot;];</span><br><span class="line"></span><br><span class="line">[self.view.layer addAnimation:keyFrameAnimation forKey:@&quot;position&quot;];</span><br></pre></td></tr></table></figure>
+
+<h4 id="CAAnimationGroup-动画组"><a href="#CAAnimationGroup-动画组" class="headerlink" title="CAAnimationGroup 动画组"></a><strong>CAAnimationGroup</strong> 动画组</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">例:组合两个基础动画</span><br><span class="line">动画1</span><br><span class="line">CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@&quot;position&quot;];</span><br><span class="line">positionAnimation.fromValue = [NSValue valueWithCGPoint:self.view.center];</span><br><span class="line">positionAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetMidX(self.view.bounds), 100)];</span><br><span class="line">动画2</span><br><span class="line">CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@&quot;opacity&quot;];</span><br><span class="line">opacityAnimation.fromValue = @(1.0);</span><br><span class="line">opacityAnimation.toValue = @(0.4);</span><br><span class="line">动画组</span><br><span class="line">CAAnimationGroup *group = [CAAnimationGroup animation];</span><br><span class="line">group.animations = @[positionAnimation,opacityAnimation];</span><br><span class="line">group.duration = 1;</span><br><span class="line">group.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];</span><br><span class="line">group.removedOnCompletion = NO;</span><br><span class="line">group.fillMode = kCAFillModeForwards;</span><br><span class="line">[self.view.layer addAnimation:group forKey:@&quot;group&quot;];</span><br></pre></td></tr></table></figure>
+
+<h4 id="渐变色"><a href="#渐变色" class="headerlink" title="渐变色"></a>渐变色</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CAGradientLayer *gradientLayer = [CAGradientLayer layer];</span><br><span class="line">gradientLayer.frame = self.view.bounds;</span><br><span class="line">gradientLayer.colors = @[(__bridge id)[UIColor colorWithRed:1.00 green:0.56 blue:0.00 alpha:1.00].CGColor,(__bridge id)[UIColor colorWithRed:0.26 green:0.79 blue:0.52 alpha:1.00].CGColor];</span><br><span class="line">[self.view.layer addSublayer:gradientLayer];</span><br></pre></td></tr></table></figure>
+
+
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#UIView%E5%8A%A8%E7%94%BB"><span class="post-toc-number">1.</span> <span class="post-toc-text">UIView动画</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%BC%A9%E6%94%BE"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">缩放</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%97%8B%E8%BD%AC"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">旋转</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%8F%98%E6%8D%A2%E5%8A%A8%E4%BD%9C%EF%BC%8D%E7%BF%BB%E8%BD%AC"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">变换动作－翻转</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%BC%B9%E6%80%A7%E5%8A%A8%E7%94%BB"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">弹性动画</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%AB%98%E7%BA%A7%E5%8A%A8%E7%94%BB"><span class="post-toc-number">2.</span> <span class="post-toc-text">高级动画</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CALayer-%E5%9B%BE%E5%B1%82"><span class="post-toc-number">3.</span> <span class="post-toc-text">CALayer 图层</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CATransition-%E8%BF%87%E6%B8%A1%E5%8A%A8%E7%94%BB"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">CATransition 过渡动画</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CABasicAnimation-%E5%9F%BA%E7%A1%80%E5%8A%A8%E7%94%BB"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">CABasicAnimation 基础动画</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CAKeyframeAnimation-%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">CAKeyframeAnimation 关键帧动画</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CAAnimationGroup-%E5%8A%A8%E7%94%BB%E7%BB%84"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">CAAnimationGroup 动画组</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%B8%90%E5%8F%98%E8%89%B2"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">渐变色</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Dawninest's Blob website.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  </span>
+
+    </footer>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/index.js"></script>
+
+  
+  </div>
+</body>

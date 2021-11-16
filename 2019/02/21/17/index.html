@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dark Force">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Dawninest</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+        GitHub</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2019/02/21/17/">
+        微信小程序 | 你在B站看番么
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2019-02-21 00:00:00" datetime="2019-02-20T16:00:00.000Z" itemprop="datePublished">
+  2019-02-21
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">微信小程序</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="小程序名-你在B站看番么"><a href="#小程序名-你在B站看番么" class="headerlink" title="小程序名: 你在B站看番么"></a>小程序名: 你在B站看番么</h3><p>状态: 1.0已上线, 2.0开发中</p>
+<p>从B站Web版拿到的接口记录</p>
+<p>通过mid获取B站用户关注的番剧列表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">https://space.bilibili.com/ajax/Bangumi/getList?mid=10279946&amp;page=4</span><br><span class="line">[&#123;</span><br><span class="line">	brief: &quot;人类遭遇了名为“空间震”的新型灾害。震荡空间、将一切破坏殆尽的这一灾厄，是由于存在于临界的精灵出现这...&quot;</span><br><span class="line">    cover: 	&quot;http://i0.hdslb.com/bfs/bangumi/fd61c0a8680678960446a849f2079e0de09d4290.png&quot;</span><br><span class="line">    evaluate: &quot;&quot;</span><br><span class="line">    favorites: 842317</span><br><span class="line">    is_finish: 0</span><br><span class="line">    last_ep_index: 0</span><br><span class="line">    newest_ep_index: 1</span><br><span class="line">    season_id: &quot;26308&quot;</span><br><span class="line">    share_url: &quot;http://bangumi.bilibili.com/anime/26308/&quot; title: &quot;约会大作战 第三季&quot;</span><br><span class="line">    total_count: 0</span><br><span class="line">&#125;,…]</span><br></pre></td></tr></table></figure>
+
+<p>通过输入关键字搜索指定用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">https://search.bilibili.com/upuser?keyword=Dawninest</span><br><span class="line">res.data.replace(/&lt;script&gt;window.__initial_state__=(.*);\(function/ig,($0,$1)=&gt;&#123;</span><br><span class="line">	this.userData=JSON.parse($1).userData</span><br><span class="line">&#125;)</span><br><span class="line">[&#123;</span><br><span class="line">	&quot;rank_offset&quot;: 1,</span><br><span class="line">	&quot;usign&quot;: &quot;傲娇的iOS Developer&quot;,</span><br><span class="line">	&quot;videos&quot;: 0,</span><br><span class="line">	&quot;fans&quot;: 2,</span><br><span class="line">	&quot;is_upuser&quot;: 0,</span><br><span class="line">	&quot;upic&quot;: 	&quot;\u002F\u002Fi1.hdslb.com\u002Fbfs\u002Fface\u002F83afeac37a7087aca9efb24f449a04923de708e9.jpg&quot;,</span><br><span class="line">	&quot;uname&quot;: &quot;Dawninest&quot;,</span><br><span class="line">	&quot;official_verify&quot;: &#123;&quot;type&quot;: 127, &quot;desc&quot;: &quot;&quot;&#125;,</span><br><span class="line">	&quot;verify_info&quot;: &quot;&quot;,</span><br><span class="line">	&quot;rank_score&quot;: 2,</span><br><span class="line">	&quot;level&quot;: 5,</span><br><span class="line">	&quot;gender&quot;: 1,</span><br><span class="line">	&quot;hit_columns&quot;: [&quot;uname&quot;],</span><br><span class="line">	&quot;mid&quot;: 10279946,</span><br><span class="line">	&quot;is_live&quot;: 0,</span><br><span class="line">	&quot;room_id&quot;: 6738557,</span><br><span class="line">	&quot;res&quot;: [],</span><br><span class="line">	&quot;rank_index&quot;: 0,</span><br><span class="line">	&quot;type&quot;: &quot;bili_user&quot;</span><br><span class="line">&#125;,..]</span><br></pre></td></tr></table></figure>
+
+<p>新番更新时间表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">https://bangumi.bilibili.com/web_api/timeline_global</span><br><span class="line">[</span><br><span class="line">	&#123;</span><br><span class="line">		date:  “2-8”,</span><br><span class="line">		date_ts: 1549555200,</span><br><span class="line">		day_of_week: 5,</span><br><span class="line">		is_today: 0,</span><br><span class="line">		seasons:</span><br><span class="line">			[</span><br><span class="line">				&#123;</span><br><span class="line">						cover: &quot;http://i0.hdslb.com/bfs/bangumi/de944b7c9306932d8dd3dcaeaf2eeec8670deec5.png&quot;	</span><br><span class="line">						delay: 0</span><br><span class="line">						ep_id: 259679</span><br><span class="line">						favorites: 1910041</span><br><span class="line">						follow: 0</span><br><span class="line">						is_published: 1</span><br><span class="line">						pub_index: &quot;第6话&quot;</span><br><span class="line">						pub_time: &quot;22:00&quot;</span><br><span class="line">						pub_ts: 1550066400</span><br><span class="line">						season_id: 26284 // 用于跳转的 ssid</span><br><span class="line">						season_status: 13</span><br><span class="line">						square_cover: &quot;http://i0.hdslb.com/bfs/bangumi/f02cf4282f5dec97d96c8b6afc4301f6bb831cc6.jpg&quot;</span><br><span class="line">						title: &quot;盾之勇者成名录&quot;</span><br><span class="line">				&#125;,...</span><br><span class="line">			]</span><br><span class="line">	&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>B站番剧排行[追番人数/最高评分/播放数量]</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">eg: </span><br><span class="line">https://bangumi.bilibili.com/media/web_api/search/result?season_version=-1&amp;area=-1&amp;is_finish=-1&amp;copyright=-1&amp;season_status=-1&amp;season_month=-1&amp;pub_date=-1&amp;style_id=-1&amp;order=4&amp;st=1&amp;sort=0&amp;page=1&amp;season_type=1&amp;pagesize=20</span><br><span class="line"></span><br><span class="line">[Get]https://bangumi.bilibili.com/media/web_api/search/result</span><br><span class="line">&#123;</span><br><span class="line">	season_version=-1, // 类型 -1/全部,1/正片,2/剧场版,3/其他 </span><br><span class="line">	area=-1,	// 地区 -1/全部,2/日本,3/美国, 1-51不含2,3 /其他 </span><br><span class="line">	is_finish=-1, // 状态 -1/全部, 1/完结,0/连载</span><br><span class="line">	copyright=-1,// 版权 -1/全部, 3/独家, 1,2,4其他</span><br><span class="line">	season_status=-1,// 付费 -1/全部, 1/免费, 2/付费, 4,6/大会员</span><br><span class="line">	season_month=-1,// 季度 -1/全部, 1/1月, 4/4月, 7/7月, 10/10月</span><br><span class="line">	pub_date=-1,// 时间 -1/全部,   2019/年份数字 或 2010-2014区间 </span><br><span class="line">	style_id=-1,// 风格 </span><br><span class="line"></span><br><span class="line">	order=4, //  0/更新时间排行,2/播放数量排行,3/追番人数排行,4/最高评分排行,5/开播时间排行</span><br><span class="line">	st=1, //未知</span><br><span class="line">	sort=0, // 0,正序/ 1,倒序</span><br><span class="line">	page=1, // 当前页码</span><br><span class="line">	season_type=1, // 未知</span><br><span class="line">	pagesize=20, // 当前每页数量</span><br><span class="line">&#125;</span><br><span class="line">返回结果例子:</span><br><span class="line">&#123;</span><br><span class="line">	data: [</span><br><span class="line">		&#123;</span><br><span class="line">			badge: &quot;会员专享&quot;</span><br><span class="line">			badge_type: 0</span><br><span class="line">			cover: &quot;http://i0.hdslb.com/bfs/bangumi/f5d5f51b941c01f8b90b361b412dc75ecc2608d3.png&quot;</span><br><span class="line">			index_show: &quot;全14话&quot;</span><br><span class="line">			is_finish: 1</span><br><span class="line">			link: &quot;https://www.bilibili.com/bangumi/play/ss24588&quot;</span><br><span class="line">			media_id: 102392</span><br><span class="line">			season_id: 24588</span><br><span class="line">			title: &quot;工作细胞&quot;</span><br><span class="line">			order: &#123;</span><br><span class="line">				follow: &quot;596.3万人追番&quot;</span><br><span class="line">				play: &quot;1.4亿次播放&quot;</span><br><span class="line">				pub_date: 1530979200</span><br><span class="line">				pub_real_time: 1530979200</span><br><span class="line">				renewal_time: 1545843600</span><br><span class="line">				score: &quot;9.7分&quot;</span><br><span class="line">				type: &quot;follow&quot;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">	…</span><br><span class="line">	],</span><br><span class="line">	page:&#123;</span><br><span class="line">		num: 1</span><br><span class="line">		size: 20</span><br><span class="line">		total: 3096</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>番剧详情</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">先得通过season_id拿到media_id</span><br><span class="line">&quot;https://www.bilibili.com/bangumi/play/ss&quot; + seasonId</span><br><span class="line">解析关键字段得到 &quot;https://www.bilibili.com/bangumi/media/&quot; + media_id</span><br><span class="line">返回数据:</span><br><span class="line">&#123;</span><br><span class="line">		actors: “利姆鲁·特恩佩斯特：冈咲美保↵大贤者：丰口惠美↵维鲁德拉·特恩佩斯特…” // 角色声优</span><br><span class="line">		title:&quot;关于我转生变成史莱姆这档事&quot; // 番名</span><br><span class="line">		chn_name: &quot;关于我转生变成史莱姆这档事&quot; // 番名中文</span><br><span class="line">		origin_name:&quot;転生したらスライムだった件&quot; // 番名日文</span><br><span class="line">		copyright: &#123;</span><br><span class="line">			is_finish:0 // 是否完结</span><br><span class="line">			is_started:1 // 是否开始</span><br><span class="line">		&#125;</span><br><span class="line">		cover: &quot;http://i0.hdslb.com/bfs/bangumi/a4c0e0ccc44fe3949a734f546cf5bb07da925bad.png&quot; //  封面</span><br><span class="line">		episode_index: &#123;</span><br><span class="line">			id:250479</span><br><span class="line">			index_show:&quot;连载中, 每周二0:30更新&quot;</span><br><span class="line">			is_new:1</span><br><span class="line">		&#125;</span><br><span class="line">		episodes: &#123; //每一话的数据</span><br><span class="line">			[</span><br><span class="line">				aid:32836144</span><br><span class="line">				cid:57467566</span><br><span class="line">				cover:&quot;http://xxxx/4994e631fef939e7f606c012682a96ce2d3bf7b8.jpg&quot;</span><br><span class="line">				duration:1420002</span><br><span class="line">				ep_id:250460</span><br><span class="line">				episode_status:2</span><br><span class="line">				from:&quot;bangumi&quot;</span><br><span class="line">				index:&quot;1&quot;</span><br><span class="line">				index_title:&quot;暴风龙维鲁德拉&quot;</span><br><span class="line">				mid:928123</span><br><span class="line">				page:1</span><br><span class="line">				pub_real_time:&quot;2018-10-02 00:30:00&quot;</span><br><span class="line">				section_id:34988</span><br><span class="line">				section_type:0</span><br><span class="line">				vid:&quot;&quot;</span><br><span class="line">			]</span><br><span class="line">			…</span><br><span class="line">		&#125;</span><br><span class="line">		evaluate: “史莱姆生活，开始了。↵上班族的三上悟在道路上被歹徒给刺杀身…” // 简介</span><br><span class="line">		media_id: “139252” //</span><br><span class="line">		param: &#123;</span><br><span class="line">			season_id:25739</span><br><span class="line">			season_type:1</span><br><span class="line">		&#125;</span><br><span class="line">		publish: &#123;</span><br><span class="line">			is_finish:0</span><br><span class="line">			is_multi:1</span><br><span class="line">			is_started:1</span><br><span class="line">			pub_date:&quot;2018-10-02&quot;</span><br><span class="line">			pub_date_show:&quot;2018年10月2日&quot;</span><br><span class="line">			time_length:24</span><br><span class="line">			total_ep:0</span><br><span class="line">		&#125;</span><br><span class="line">		rating: &#123;</span><br><span class="line">			count:43958 // 评分人数</span><br><span class="line">			score:9.5	// 评分</span><br><span class="line">		&#125;</span><br><span class="line">		staff: “” // STAFF</span><br><span class="line">		stat: &#123;</span><br><span class="line">			danmakus:2232701 // 弹幕总数</span><br><span class="line">			favorites:4299164 // 追番人数</span><br><span class="line">			views:137665521 // 总播放</span><br><span class="line">		&#125;</span><br><span class="line">		style: [ // 类型?标签?</span><br><span class="line">			&#123;</span><br><span class="line">				id:117</span><br><span class="line">				name:&quot;小说改&quot;</span><br><span class="line">			&#125;</span><br><span class="line">			...</span><br><span class="line">		]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>计划后续功能</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. B站番剧排行页面</span><br><span class="line">2. 用户关联相关设计</span><br><span class="line">3. 热门番剧推荐</span><br><span class="line">4. 想一个更实用的使用点[番剧更新提示推送?]</span><br></pre></td></tr></table></figure>
+
+
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%90%8D-%E4%BD%A0%E5%9C%A8B%E7%AB%99%E7%9C%8B%E7%95%AA%E4%B9%88"><span class="post-toc-number">1.</span> <span class="post-toc-text">小程序名: 你在B站看番么</span></a></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Dawninest's Blob website.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  </span>
+
+    </footer>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/index.js"></script>
+
+  
+  </div>
+</body>

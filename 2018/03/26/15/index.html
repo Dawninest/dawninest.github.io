@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dark Force">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Dawninest</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+        GitHub</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2018/03/26/15/">
+        ReactNative | 混合多个ReactNative项目的思考
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2018-03-26 00:00:00" datetime="2018-03-25T16:00:00.000Z" itemprop="datePublished">
+  2018-03-26
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactNative/" rel="tag">ReactNative</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="混合多个ReactNative项目的尝试-iOS"><a href="#混合多个ReactNative项目的尝试-iOS" class="headerlink" title="混合多个ReactNative项目的尝试[iOS]"></a>混合多个ReactNative项目的尝试[iOS]</h3><p>此文建议有一定ReactNative基础和iOS开发基础之后再阅读</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">起因：&lt;br&gt;公司需要在一个平台类的RN项目中，通过跳转打开另外一个RN项目，但是并不想另外一个RN项目出现在手机桌面上,</span><br><span class="line">安卓版的直接用linking解决了，但是iOS的并不能安装一个不现实的应用，所以没法使用安卓类似的思路解决，</span><br><span class="line">所以尝试将多个RN项目打包到一起通过iOS原生代码进行切换</span><br></pre></td></tr></table></figure>
+
+<p>在RN的iOS项目中，在AppDelegate.m中，是通过这样的代码启用RN模块的：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">NSURL *jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@&quot;index.ios&quot; fallbackResource:nil];</span><br><span class="line">RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation</span><br><span class="line">                                                  moduleName:@&quot;test&quot;</span><br><span class="line">                                           initialProperties:nil</span><br><span class="line">                                               launchOptions:NULL];</span><br><span class="line">rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];</span><br><span class="line">self.view = rootView;</span><br></pre></td></tr></table></figure>
+
+<p>可见，通过”index.ios”找到工程项目中指定的启动ReactNative的js文件，然后通过moduleName拿到在启动文件中注册的module信息 在index.ios.js中通过这样的代码来注册moduleName：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AppRegistry.registerComponent(&#x27;test&#x27;, () =&gt; test);</span><br></pre></td></tr></table></figure>
+
+<p> 就是说，如果这里不禁止同时注册多个的话，是可以在iOS原生代码中进行切换不同moduleName的ReactNative项目的， 所以，在此注册多个：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AppRegistry.registerComponent(&#x27;test&#x27;, () =&gt; test);</span><br><span class="line">AppRegistry.registerComponent(&#x27;test1&#x27;, () =&gt; test1);</span><br></pre></td></tr></table></figure>
+
+<p>然后把AppDelegate.m中启动ReactNative项目的代码拿到新的ViewController中，指定当前ViewController.view = rootView<br>在这个ViewController中，随便写一个跳转新ViewController方法作为事件响应，跳转后也用同样的方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">NSURL *jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@&quot;index.ios&quot; fallbackResource:nil];</span><br><span class="line">RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation</span><br><span class="line">                                                  moduleName:@&quot;test1&quot;</span><br><span class="line">                                           initialProperties:nil</span><br><span class="line">                                               launchOptions:NULL];</span><br><span class="line">rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];</span><br><span class="line">self.view = rootView;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="つづく"><a href="#つづく" class="headerlink" title="つづく"></a>つづく</h3>
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%B7%B7%E5%90%88%E5%A4%9A%E4%B8%AAReactNative%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B0%9D%E8%AF%95-iOS"><span class="post-toc-number">1.</span> <span class="post-toc-text">混合多个ReactNative项目的尝试[iOS]</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E3%81%A4%E3%81%A5%E3%81%8F"><span class="post-toc-number">2.</span> <span class="post-toc-text">つづく</span></a></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Dawninest's Blob website.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  </span>
+
+    </footer>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/index.js"></script>
+
+  
+  </div>
+</body>

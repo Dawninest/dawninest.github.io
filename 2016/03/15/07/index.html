@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dark Force">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Dawninest</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+        GitHub</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2016/03/15/07/">
+        Objective-C | 数据的外部储存和读取
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2016-03-15 00:00:00" datetime="2016-03-14T16:00:00.000Z" itemprop="datePublished">
+  2016-03-15
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="设备存储路径"><a href="#设备存储路径" class="headerlink" title="设备存储路径"></a>设备存储路径</h3><p>每一个App，iOS系统将会预设3个文件夹体感存储功能</p>
+<ul>
+<li>documents路径</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSString *documentString = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject];</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>library路径</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSString *libraryString = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)lastObject];</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>tmp路径 － tmp作为临时存储，不向其中存储需要持久保留的数据</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSString *tmpString = NSTemporaryDirectory();</span><br></pre></td></tr></table></figure>
+
+<h4 id="把工程中的图片写入沙盒"><a href="#把工程中的图片写入沙盒" class="headerlink" title="把工程中的图片写入沙盒"></a>把工程中的图片写入沙盒</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1.保存图片的路径</span><br><span class="line">NSString *documentString = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject];</span><br><span class="line">NSString *saveImagePath = [documentString stringByAppendingString:@“/图片名”];</span><br><span class="line">2.获取图片</span><br><span class="line">NSString *path = [[NSBundle mainBundle]pathForResource:@“图片名” ofType:@“png”];</span><br><span class="line">UIImage *image = [UIImage imageWithContentsOfFile:path];</span><br><span class="line">3.把图片转换为data</span><br><span class="line">NSData *imageData = UIImagePNGRepresentation(image);</span><br><span class="line">4.写入沙盒</span><br><span class="line">NSFileManager *manager = [NSFileManager defaultManager];//单例</span><br><span class="line">if (![manager fileExistsAtPath:saveImagePath]) &#123;</span><br><span class="line">    [manager createFileAtPath:saveImagePath contents:imageData attributes:nil];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">读取指定文件下的图片</span><br><span class="line">[UIImage imageWithContentsOfFile:saveImagePath];</span><br></pre></td></tr></table></figure>
+
+<h3 id="存储自定义对象"><a href="#存储自定义对象" class="headerlink" title="存储自定义对象"></a>存储自定义对象</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">例子:存储联系人信息数组</span><br><span class="line"></span><br><span class="line">存储</span><br><span class="line">1.获取联系人对象</span><br><span class="line">Contact *acontact = [[Contact alloc]initWithDictionary:[self userDic]];</span><br><span class="line">2.获取保存文件路径</span><br><span class="line">NSString *plistPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject];</span><br><span class="line">plistPath = [plistPath stringByAppendingString:@&quot;/data.plist&quot;];</span><br><span class="line">3.初始化写入沙盒的数组</span><br><span class="line">NSMutableArray *dataList = [NSMutableArray array];</span><br><span class="line">4.归档(自动调用归档方法)</span><br><span class="line">NSData *data = [NSKeyedArchiver archivedDataWithRootObject:acontact];</span><br><span class="line">5.把归档所得数据添加的数组</span><br><span class="line">[dataList addObject:data];</span><br><span class="line">6.将数组写入沙盒</span><br><span class="line">BOOL success = [dataList writeToFile:plistPath atomically:YES];</span><br><span class="line">NSLog(@&quot;是否保存成功:%d&quot;,success);</span><br><span class="line"></span><br><span class="line">读取</span><br><span class="line">1.获取保存文件的路径</span><br><span class="line">NSString *plistPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject];</span><br><span class="line">plistPath = [plistPath stringByAppendingString:@&quot;/data.plist&quot;];</span><br><span class="line">2.读取沙盒文件</span><br><span class="line">NSArray *results = [NSArray arrayWithContentsOfFile:plistPath];</span><br><span class="line">3.解档</span><br><span class="line">NSData *data = results[0];//取出data</span><br><span class="line">Contact *acontact = [NSKeyedUnarchiver unarchiveObjectWithData:data];</span><br><span class="line"></span><br><span class="line">删除</span><br><span class="line">1.获取保存文件的路径</span><br><span class="line">NSString *plistPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject];</span><br><span class="line">plistPath = [plistPath stringByAppendingString:@&quot;/data.plist&quot;];</span><br><span class="line">2.清除</span><br><span class="line">NSFileManager *manager = [NSFileManager defaultManager];</span><br><span class="line">BOOL success = [manager removeItemAtPath:plistPath error:nil];</span><br><span class="line">NSLog(@&quot;是否清除成功:%d&quot;,success);</span><br></pre></td></tr></table></figure>
+
+<h3 id="NSUserDefaults-存沙盒"><a href="#NSUserDefaults-存沙盒" class="headerlink" title="NSUserDefaults 存沙盒"></a><strong>NSUserDefaults</strong> 存沙盒</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">存</span><br><span class="line">[[NSUserDefaults standardUserDefaults] setObject:@[@&quot;1&quot;] forKey:@&quot;mydata&quot;];</span><br><span class="line">[[NSUserDefaults standardUserDefaults] synchronize];//同步至沙盒</span><br><span class="line">取</span><br><span class="line">NSArray *array = [[NSUserDefaults standardUserDefaults] objectForKey:@&quot;mydata&quot;];</span><br></pre></td></tr></table></figure>
+
+
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%AE%BE%E5%A4%87%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84"><span class="post-toc-number">1.</span> <span class="post-toc-text">设备存储路径</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%8A%8A%E5%B7%A5%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%E5%86%99%E5%85%A5%E6%B2%99%E7%9B%92"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">把工程中的图片写入沙盒</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AD%98%E5%82%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AF%B9%E8%B1%A1"><span class="post-toc-number">2.</span> <span class="post-toc-text">存储自定义对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NSUserDefaults-%E5%AD%98%E6%B2%99%E7%9B%92"><span class="post-toc-number">3.</span> <span class="post-toc-text">NSUserDefaults 存沙盒</span></a></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Dawninest's Blob website.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  </span>
+
+    </footer>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/index.js"></script>
+
+  
+  </div>
+</body>

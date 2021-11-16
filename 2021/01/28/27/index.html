@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dark Force">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Dawninest</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+        GitHub</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" target="_blank" rel="noopener" href="https://github.com/Dawninest">
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/01/28/27/">
+        React Native | iOS热更新引入
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-01-28 00:00:00" datetime="2021-01-27T16:00:00.000Z" itemprop="datePublished">
+  2021-01-28
+</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactNative/" rel="tag">ReactNative</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="iOS热更新"><a href="#iOS热更新" class="headerlink" title="iOS热更新"></a>iOS热更新</h2><h4 id="ReactNative-原理及热更新"><a href="#ReactNative-原理及热更新" class="headerlink" title="ReactNative 原理及热更新"></a>ReactNative 原理及热更新</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">在 React 框架中，JSX 源码通过 React 框架最终渲染到了浏览器的真实 DOM 中，</span><br><span class="line"></span><br><span class="line">而在 React Native 框架中，JSX 源码通过 React Native 框架编译后，通过对应平台的 Bridge 实现了与原生框架的通信</span><br><span class="line"></span><br><span class="line">因为 React Native 的底层为 React 框架，所以如果是 UI 层的变更，那么就映射为虚拟 DOM 后进行 diff 算法，diff 算法计算出变动后的 JSON 映射文件，最终由 Native 层将此 JSON 文件映射渲染到原生 App 的页面元素上，最终实现了在项目中只需要控制 state 以及 props 的变更来引起 iOS 与 Android 平台的 UI 变更。</span><br><span class="line"></span><br><span class="line">编写的 React Native代码最终会打包生成一个 main.bundle.js 文件供 App 加载，此文件可以在 App 设备本地，也可以存放于服务器上供 App 下载更新</span><br><span class="line"></span><br><span class="line">本质上还是一个ReactNative App加载main.bundle的模型,main.bundle可以被替换(热更新)</span><br><span class="line"></span><br><span class="line">React Native 采用了 JavaScriptCore 作为 JS VM，中间通过 JSON 文件与 Bridge 进行通信,在使用 Chrome 浏览器进行调试时，那么所有的 JavaScript 代码都将运行在 Chrome 的 V8 引擎中，(即调试模式会起一个node.js窗口)与原生代码通过 WebSocket 进行通信</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p>React Native 的核心驱动力来自于 JS Engine,所有的js和jsx代码都会被JS Engine来执行,在iOS上,即来自webKit的JavaScriptCore</p>
+<hr>
+<p>JavaScript在React Native里非常重要:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.负责管理UI component的生命周期,管理Virtual DOM</span><br><span class="line">2.所有的业务逻辑都是用js来实现或衔接</span><br><span class="line">3.调用原生代码来操控原生组件</span><br><span class="line">4.js本身无绘图能力,都是通过给原生组件发指令来完成</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p>React Native应用启动时有以下三个任务并行完成:</p>
+<p>1.<strong>加载JavaScript打包文件</strong>，React Native的打包工具会像Webpack和Browserify一样把代码连同全部依赖打包成单个文件</p>
+<p>2.与此同时，React Native开始<strong>加载原生模块</strong>。一旦某个原生模块完成加载就在桥接层注册，桥接层确认该模块。此时整个应用便知道该模块已可用并能创建该模块的实例</p>
+<p>3.<strong>启动JavaScript虚拟机</strong>，提供JavaScript代码的执行环境</p>
+<hr>
+<p>Bridge的作用就是给RN内嵌的JS Engine提供原生接口的扩展供JS调用,所有的原生功能都是通过Bridge封装城JS接口后注入JS Engine供JS调用</p>
+<hr>
+<p>React Native有三个重要的线程:</p>
+<p>1.Shadow queue 布局引擎(yoga)计算布局</p>
+<p>2.Main thread主线程,操作系统的UI线程</p>
+<p>3.Javascript thread. JavaScript线程,因为js是单线程模型,event驱动的异步模型,所以有此独立的js线程,所有的js和原生代码的交互都发生在这个线程里</p>
+<hr>
+<p>React Native启动流程iOS</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1.创建RCTRootView //设置窗口根控制器View,在界面上显示RN的主View</span><br><span class="line">2.创建RCTBridge //桥接对象,管理JS和OC交互,做中转</span><br><span class="line">3.创建RCTBatchBridge // 批量桥接对象,JS和OC交互具体实现在此</span><br><span class="line">4.执行[RCTBatchBridge loadSource] //加载js源码</span><br><span class="line">5.执行[RCTBatchBridge initModulesWithDispatchGroup] // 创建OC模块表</span><br><span class="line">6.执行[RCTJSCExecutor injectJSONText] 往JS中插入OC模块表</span><br><span class="line">7.执行完js代码,回调OC,调用OC中的组件</span><br><span class="line">8.完成UI渲染</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#iOS%E7%83%AD%E6%9B%B4%E6%96%B0"><span class="post-toc-number">1.</span> <span class="post-toc-text">iOS热更新</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ReactNative-%E5%8E%9F%E7%90%86%E5%8F%8A%E7%83%AD%E6%9B%B4%E6%96%B0"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">ReactNative 原理及热更新</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Dawninest's Blob website.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  </span>
+
+    </footer>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/index.js"></script>
+
+  
+  </div>
+</body>
